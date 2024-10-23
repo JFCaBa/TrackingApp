@@ -5,10 +5,10 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import UIKit
-import CoreLocation
-import CoreData
 import Combine
+import CoreData
+import CoreLocation
+import UIKit
 
 final class CoreDataManager {
     static let shared = CoreDataManager()
@@ -92,11 +92,11 @@ final class CoreDataManager {
         let locationArray = Array(locations).sorted { $0.timestamp < $1.timestamp }
         var distance = 0.0
         
-        for i in 0..<locationArray.count-1 {
+        for i in 0 ..< locationArray.count - 1 {
             let loc1 = CLLocation(latitude: locationArray[i].latitude,
-                                longitude: locationArray[i].longitude)
+                                  longitude: locationArray[i].longitude)
             let loc2 = CLLocation(latitude: locationArray[i+1].latitude,
-                                longitude: locationArray[i+1].longitude)
+                                  longitude: locationArray[i+1].longitude)
             distance += loc1.distance(from: loc2)
         }
         

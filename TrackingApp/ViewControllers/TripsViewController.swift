@@ -5,8 +5,8 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 final class TripsViewController: UIViewController {
     private let viewModel: TripsViewModel
@@ -32,6 +32,7 @@ final class TripsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -105,7 +106,7 @@ final class TripsViewController: UIViewController {
     private func setupBindings() {
         viewModel.$state
             .receive(on: DispatchQueue.main)
-            .compactMap({$0})
+            .compactMap { $0 }
             .sink { [weak self] state in
                 guard let self else { return }
                 
@@ -172,6 +173,7 @@ final class TripsViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+
 extension TripsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if case .loaded(let trips) = viewModel.state {
@@ -182,7 +184,8 @@ extension TripsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripCell,
-              case .loaded(let trips) = viewModel.state else {
+              case .loaded(let trips) = viewModel.state
+        else {
             return UITableViewCell()
         }
         
@@ -192,10 +195,12 @@ extension TripsViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+
 extension TripsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard case .loaded(let trips) = viewModel.state,
-              editingStyle == .delete else {
+              editingStyle == .delete
+        else {
             return
         }
         

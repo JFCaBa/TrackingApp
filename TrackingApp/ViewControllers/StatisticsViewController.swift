@@ -5,8 +5,8 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 final class StatisticsViewController: UIViewController {
     private let viewModel: StatisticsViewModel
@@ -55,6 +55,7 @@ final class StatisticsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -120,11 +121,12 @@ final class StatisticsViewController: UIViewController {
     }
     
     // MARK: - Bindings
+
     private func setupBindings() {
         viewModel.$state
             .receive(on: DispatchQueue.main)
             .print("State Publisher")
-            .compactMap({$0})
+            .compactMap { $0 }
             .sink { [weak self] state in
                 self?.handleState(state)
             }
@@ -154,43 +156,43 @@ final class StatisticsViewController: UIViewController {
     }
     
     func addSectionHeader(_ title: String) {
-            let headerView = createSectionHeaderView(title)
-            statsStackView.addArrangedSubview(headerView)
-        }
+        let headerView = createSectionHeaderView(title)
+        statsStackView.addArrangedSubview(headerView)
+    }
         
-        private func createSectionHeaderView(_ title: String) -> UIView {
-            let containerView = UIView()
-            containerView.translatesAutoresizingMaskIntoConstraints = false
+    private func createSectionHeaderView(_ title: String) -> UIView {
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
             
-            let titleLabel = UILabel()
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            titleLabel.text = title
-            titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
-            titleLabel.textColor = .label
+        let titleLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = title
+        titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        titleLabel.textColor = .label
             
-            let separatorLine = UIView()
-            separatorLine.translatesAutoresizingMaskIntoConstraints = false
-            separatorLine.backgroundColor = .separator
+        let separatorLine = UIView()
+        separatorLine.translatesAutoresizingMaskIntoConstraints = false
+        separatorLine.backgroundColor = .separator
             
-            containerView.addSubview(titleLabel)
-            containerView.addSubview(separatorLine)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(separatorLine)
             
-            NSLayoutConstraint.activate([
-                // Title constraints
-                titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 24),
-                titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-                titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+        NSLayoutConstraint.activate([
+            // Title constraints
+            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 24),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
                 
-                // Separator constraints
-                separatorLine.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-                separatorLine.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-                separatorLine.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-                separatorLine.heightAnchor.constraint(equalToConstant: 1),
-                separatorLine.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8)
-            ])
+            // Separator constraints
+            separatorLine.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            separatorLine.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            separatorLine.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            separatorLine.heightAnchor.constraint(equalToConstant: 1),
+            separatorLine.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8)
+        ])
             
-            return containerView
-        }
+        return containerView
+    }
     
     private func addModeStatistics(_ modeStats: [StatisticsViewModel.ModeStatistics]) {
         let modeStackView = UIStackView()
@@ -202,10 +204,10 @@ final class StatisticsViewController: UIViewController {
             card.configure(
                 title: "\(modeStat.mode.rawValue.capitalized) Trips",
                 value: """
-                        \(modeStat.tripCount) trips
-                        \(String(format: "%.1f km", modeStat.totalDistance / 1000))
-                        \(String(format: "%.0f km/h avg", modeStat.averageSpeed))
-                        """,
+                \(modeStat.tripCount) trips
+                \(String(format: "%.1f km", modeStat.totalDistance / 1000))
+                \(String(format: "%.0f km/h avg", modeStat.averageSpeed))
+                """,
                 iconName: modeStat.mode.icon,
                 color: modeStat.mode.color
             )
@@ -270,14 +272,14 @@ final class StatisticsViewController: UIViewController {
         }
         
         // Add fastest trip card if available
-        //        if let fastestTrip = statistics.fastestTrip {
-        //            addTripCard(
-        //                title: "Fastest Trip",
-        //                trip: fastestTrip,
-        //                icon: "bolt.circle.fill",
-        //                color: .systemRed
-        //            )
-        //        }
+        if let fastestTrip = statistics.fastestTrip {
+            addTripCard(
+                title: "Fastest Trip",
+                trip: fastestTrip,
+                icon: "bolt.circle.fill",
+                color: .systemRed
+            )
+        }
         
         if !statistics.modeStats.isEmpty {
             addSectionHeader("By Transportation Mode")
@@ -320,4 +322,3 @@ final class StatisticsViewController: UIViewController {
         statsStackView.addArrangedSubview(card)
     }
 }
-

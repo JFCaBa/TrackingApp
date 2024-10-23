@@ -5,26 +5,28 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import CoreLocation
 import Combine
+import CoreLocation
 import UIKit
 
 final class LocationPermissionChecker: NSObject {
-    
     // MARK: - Properties
+
     static let shared = LocationPermissionChecker()
     
     @Published private(set) var authorizationStatus: CLAuthorizationStatus = .notDetermined
     private let locationManager = CLLocationManager()
     
     // MARK: - Initialization
-    private override init() {
+
+    override private init() {
         super.init()
         locationManager.delegate = self
         authorizationStatus = locationManager.authorizationStatus
     }
     
     // MARK: - Public Methods
+
     func requestLocationPermissions() {
         switch locationManager.authorizationStatus {
         case .notDetermined:
@@ -45,6 +47,7 @@ final class LocationPermissionChecker: NSObject {
     }
     
     // MARK: - Private Methods
+
     private func handleRestrictedOrDeniedAccess() {
         NotificationCenter.default.post(
             name: .locationPermissionDenied,
@@ -54,7 +57,8 @@ final class LocationPermissionChecker: NSObject {
     
     func openAppSettings() {
         guard let settingsURL = URL(string: UIApplication.openSettingsURLString),
-              UIApplication.shared.canOpenURL(settingsURL) else {
+              UIApplication.shared.canOpenURL(settingsURL)
+        else {
             return
         }
         UIApplication.shared.open(settingsURL)
@@ -62,6 +66,7 @@ final class LocationPermissionChecker: NSObject {
 }
 
 // MARK: - CLLocationManagerDelegate
+
 extension LocationPermissionChecker: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         authorizationStatus = manager.authorizationStatus
@@ -75,7 +80,3 @@ extension LocationPermissionChecker: CLLocationManagerDelegate {
     }
 }
 
-// MARK: - Notification Names
-extension Notification.Name {
-    static let locationPermissionDenied = Notification.Name("locationPermissionDenied")
-}

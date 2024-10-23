@@ -15,7 +15,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator: AppCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        MotionActivityManager.shared.startMonitoring()
+        TransportationModeDetectionService.shared.startMonitoring()
         
         setupWindow()
         setupAppCoordinator()

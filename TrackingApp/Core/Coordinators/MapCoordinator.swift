@@ -7,7 +7,6 @@
 
 import UIKit
 
-// MARK: - Map Coordinator
 final class MapCoordinator: Coordinator {
     func createViewController() -> UIViewController {
         let viewModel = MapViewModel()

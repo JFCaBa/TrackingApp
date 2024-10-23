@@ -5,8 +5,8 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import Foundation
 import CoreLocation
+import Foundation
 
 extension CoreDataManager {
     func endCurrentTrip() {
@@ -24,11 +24,11 @@ extension CoreDataManager {
         var distance = 0.0
         var speeds: [Double] = []
         
-        for i in 0..<locationArray.count-1 {
+        for i in 0 ..< locationArray.count - 1 {
             let loc1 = CLLocation(latitude: locationArray[i].latitude,
-                                longitude: locationArray[i].longitude)
+                                  longitude: locationArray[i].longitude)
             let loc2 = CLLocation(latitude: locationArray[i+1].latitude,
-                                longitude: locationArray[i+1].longitude)
+                                  longitude: locationArray[i+1].longitude)
             distance += loc1.distance(from: loc2)
             
             if locationArray[i].speed > 0 {
@@ -54,6 +54,10 @@ extension CoreDataManager {
         } else {
             trip.transportationMode = TransportationMode.unknown.rawValue
         }
+        
+        // Use the current mode from the detection service
+        trip.transportationMode = TransportationModeDetectionService.shared.currentMode.rawValue
+        
         
         currentTrip = nil
         saveContext()

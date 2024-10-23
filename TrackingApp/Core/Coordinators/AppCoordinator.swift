@@ -95,7 +95,3 @@ protocol Coordinator: AnyObject {
     func start()
 }
 
-// MARK: - Notification Extension
-extension Notification.Name {
-    static let locationDidUpdate = Notification.Name("locationDidUpdate")
-}

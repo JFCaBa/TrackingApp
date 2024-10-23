@@ -5,22 +5,22 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import UIKit
 import Combine
 import MapKit
-
+import UIKit
 
 // MARK: - Map ViewModel
+
 final class MapViewModel {
     @Published private(set) var currentSpeed: Double = 0.0
     @Published private(set) var currentLocation: CLLocation?
-    
+
     private var cancellables = Set<AnyCancellable>()
-    
+
     init() {
         setupLocationObserver()
     }
-    
+
     private func setupLocationObserver() {
         NotificationCenter.default.publisher(for: .locationDidUpdate)
             .compactMap { $0.object as? CLLocation }
@@ -31,7 +31,3 @@ final class MapViewModel {
             .store(in: &cancellables)
     }
 }
-
-
-
-

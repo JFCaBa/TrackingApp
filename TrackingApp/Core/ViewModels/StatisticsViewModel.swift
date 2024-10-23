@@ -5,8 +5,8 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 final class StatisticsViewModel {
     struct ModeStatistics {
@@ -29,7 +29,6 @@ final class StatisticsViewModel {
         let fastestTrip: Trip?
         let modeStats: [ModeStatistics]
     }
-    
     
     @Published private(set) var state: LoadingState<Statistics> = .empty
     private var cancellables = Set<AnyCancellable>()

@@ -5,8 +5,8 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 @objc(LocationEntity)
 public class LocationEntity: NSManagedObject {
