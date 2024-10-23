@@ -14,7 +14,10 @@ A Swift app that automatically tracks and records your trips using motion detect
 
 ## Screenshots
 
-[Coming soon]
+![Simulator Screenshot - iPhone 15 Pro - 2024-10-23 at 19 00 15](https://github.com/user-attachments/assets/5e70d9d2-489a-4d61-9892-baa9e8abb395)
+ | ![Simulator Screenshot - iPhone 15 Pro - 2024-10-23 at 19 00 19](https://github.com/user-attachments/assets/2744d501-9d5f-4582-9183-70b505e33e36)
+ | ![Simulator Screenshot - iPhone 15 Pro - 2024-10-23 at 19 00 23](https://github.com/user-attachments/assets/28ac68e0-55e0-4a6f-8b06-c07e5e4d0734)
+
 
 ## Requirements
 
