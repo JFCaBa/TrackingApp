@@ -1,3 +1,10 @@
+//
+//  AppCoordinator.swift
+//  TrackingApp
+//
+//  Created by Jose on 23/10/2024.
+//
+
 import UIKit
 
 final class AppCoordinator: Coordinator {
@@ -79,14 +86,10 @@ final class AppCoordinator: Coordinator {
             selectedImage: UIImage(systemName: "chart.bar.fill")?.withRenderingMode(.alwaysTemplate)
         )
         
-        let viewControllers = [
-            mapViewController,
-            tripsViewController,
-            statisticsViewController
-        ]
-        
-        tabBarController.setViewControllers(viewControllers, animated: false)
-        tabBarController.selectedIndex = 0
+        tabBarController.setViewControllers(
+            [mapViewController, tripsViewController, statisticsViewController],
+            animated: false
+        )
     }
 }
 

@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		828545372CC996900074EBF9 /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545362CC996900074EBF9 /* TripMapViewController.swift */; };
+		828545382CC996900074EBF9 /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545362CC996900074EBF9 /* TripMapViewController.swift */; };
+		828545392CC996900074EBF9 /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545362CC996900074EBF9 /* TripMapViewController.swift */; };
+		8285453B2CC997210074EBF9 /* TripMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453A2CC997210074EBF9 /* TripMapViewModel.swift */; };
+		8285453C2CC997210074EBF9 /* TripMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453A2CC997210074EBF9 /* TripMapViewModel.swift */; };
+		8285453D2CC997210074EBF9 /* TripMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453A2CC997210074EBF9 /* TripMapViewModel.swift */; };
+		8285453F2CC997690074EBF9 /* TripStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453E2CC997690074EBF9 /* TripStatsView.swift */; };
+		828545402CC997690074EBF9 /* TripStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453E2CC997690074EBF9 /* TripStatsView.swift */; };
+		828545412CC997690074EBF9 /* TripStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285453E2CC997690074EBF9 /* TripStatsView.swift */; };
+		828545432CC9979D0074EBF9 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545422CC9979D0074EBF9 /* TripAnnotation.swift */; };
+		828545442CC9979D0074EBF9 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545422CC9979D0074EBF9 /* TripAnnotation.swift */; };
+		828545452CC9979D0074EBF9 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545422CC9979D0074EBF9 /* TripAnnotation.swift */; };
+		828545472CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */; };
+		828545482CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */; };
+		828545492CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */; };
 		82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
 		82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
 		82C2858F2CC8E918000CF5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C2858D2CC8E918000CF5F7 /* Main.storyboard */; };
@@ -156,6 +171,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		828545362CC996900074EBF9 /* TripMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewController.swift; sourceTree = "<group>"; };
+		8285453A2CC997210074EBF9 /* TripMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewModel.swift; sourceTree = "<group>"; };
+		8285453E2CC997690074EBF9 /* TripStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatsView.swift; sourceTree = "<group>"; };
+		828545422CC9979D0074EBF9 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
+		828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Locations.swift"; sourceTree = "<group>"; };
 		82C285842CC8E918000CF5F7 /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285872CC8E918000CF5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C285892CC8E918000CF5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -343,6 +363,7 @@
 				82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */,
 				82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */,
 				82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */,
+				8285453A2CC997210074EBF9 /* TripMapViewModel.swift */,
 				82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */,
 				82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */,
 			);
@@ -356,6 +377,7 @@
 				82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */,
 				82C285F32CC90404000CF5F7 /* CoreDataManager.swift */,
 				82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */,
+				828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */,
 				82C2866F2CC97049000CF5F7 /* GeofencingService.swift */,
 				82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */,
 				82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */,
@@ -368,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */,
+				828545362CC996900074EBF9 /* TripMapViewController.swift */,
 				82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */,
 				82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */,
 				82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */,
@@ -380,9 +403,11 @@
 			children = (
 				82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */,
 				82C286172CC915FB000CF5F7 /* TripStatCardView.swift */,
+				8285453E2CC997690074EBF9 /* TripStatsView.swift */,
 				82C286502CC931C0000CF5F7 /* StatCardView.swift */,
 				82C286022CC90BE5000CF5F7 /* LoadingView.swift */,
 				82C286042CC90C09000CF5F7 /* EmptyStateView.swift */,
+				828545422CC9979D0074EBF9 /* TripAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -574,7 +599,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828545372CC996900074EBF9 /* TripMapViewController.swift in Sources */,
 				82C285C52CC8EA4B000CF5F7 /* MapCoordinator.swift in Sources */,
+				8285453B2CC997210074EBF9 /* TripMapViewModel.swift in Sources */,
 				82C285CB2CC8EACD000CF5F7 /* TripsViewModel.swift in Sources */,
 				82C286702CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286152CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */,
@@ -593,11 +620,14 @@
 				82C285EE2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
 				82C286772CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C285C92CC8EAB1000CF5F7 /* TripCoordinator.swift in Sources */,
+				828545432CC9979D0074EBF9 /* TripAnnotation.swift in Sources */,
 				82C285E82CC90330000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
+				828545472CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */,
 				82C285F42CC90404000CF5F7 /* CoreDataManager.swift in Sources */,
 				82C285BD2CC8E9A4000CF5F7 /* MapViewModel.swift in Sources */,
 				82C286072CC90D03000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
 				82C286622CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
+				8285453F2CC997690074EBF9 /* TripStatsView.swift in Sources */,
 				82C285C32CC8EA2F000CF5F7 /* SpeedView.swift in Sources */,
 				82C285CD2CC8EAE2000CF5F7 /* TripEntity.swift in Sources */,
 				82C2865E2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
@@ -631,14 +661,18 @@
 				82C286632CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
 				82C286712CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286212CC91C47000CF5F7 /* AppCoordinator.swift in Sources */,
+				828545442CC9979D0074EBF9 /* TripAnnotation.swift in Sources */,
 				82C286222CC91C5E000CF5F7 /* TripEntity.swift in Sources */,
 				82C286102CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C2862E2CC91CE9000CF5F7 /* AppDelegate.swift in Sources */,
 				82C2860C2CC90E3C000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
 				82C2860A2CC90E32000CF5F7 /* TripsViewController.swift in Sources */,
 				82C2866B2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */,
+				828545382CC996900074EBF9 /* TripMapViewController.swift in Sources */,
 				82C285A22CC8E91A000CF5F7 /* TrackingAppTests.swift in Sources */,
 				82C286282CC91CBF000CF5F7 /* SpeedView.swift in Sources */,
+				828545402CC997690074EBF9 /* TripStatsView.swift in Sources */,
+				828545482CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */,
 				82C286782CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C285FC2CC909B0000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C286562CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
@@ -660,6 +694,7 @@
 				82C286162CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */,
 				82C2862A2CC91CC5000CF5F7 /* EmptyStateView.swift in Sources */,
 				82C2860B2CC90E36000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
+				8285453C2CC997210074EBF9 /* TripMapViewModel.swift in Sources */,
 				82C286192CC915FB000CF5F7 /* TripStatCardView.swift in Sources */,
 				82C286252CC91CB9000CF5F7 /* LocationEntity.swift in Sources */,
 				82C2865F2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
@@ -676,6 +711,7 @@
 				82C286722CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286332CC91FFA000CF5F7 /* XCTestCase+Helpers.swift in Sources */,
 				82C286452CC92071000CF5F7 /* LocationPermissionChecker.swift in Sources */,
+				828545452CC9979D0074EBF9 /* TripAnnotation.swift in Sources */,
 				82C286382CC92045000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C286492CC9207A000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C285AC2CC8E91A000CF5F7 /* TrackingAppUITests.swift in Sources */,
@@ -692,9 +728,11 @@
 				82C2863E2CC92058000CF5F7 /* StatisticsViewController.swift in Sources */,
 				82C286792CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C2863A2CC9204C000CF5F7 /* EmptyStateView.swift in Sources */,
+				8285453D2CC997210074EBF9 /* TripMapViewModel.swift in Sources */,
 				82C2865B2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
 				82C2864C2CC92082000CF5F7 /* MapCoordinator.swift in Sources */,
 				82C286462CC92073000CF5F7 /* LocationPermissionAlert.swift in Sources */,
+				828545412CC997690074EBF9 /* TripStatsView.swift in Sources */,
 				82C2863C2CC92050000CF5F7 /* TripStatCardView.swift in Sources */,
 				82C2864A2CC9207D000CF5F7 /* TripCoordinator.swift in Sources */,
 				82C286432CC92066000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
@@ -703,9 +741,11 @@
 				82C285C12CC8E9EB000CF5F7 /* MapViewModel.swift in Sources */,
 				82C286642CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
 				82C286372CC92043000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
+				828545392CC996900074EBF9 /* TripMapViewController.swift in Sources */,
 				82C2864B2CC9207F000CF5F7 /* StatisticsCoordinator.swift in Sources */,
 				82C286402CC9205E000CF5F7 /* TripsViewController.swift in Sources */,
 				82C286352CC9203E000CF5F7 /* LocationEntity.swift in Sources */,
+				828545492CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */,
 				82C286472CC92075000CF5F7 /* CoreDataManager.swift in Sources */,
 				82C286422CC92063000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C286342CC9201A000CF5F7 /* TripEntity.swift in Sources */,
