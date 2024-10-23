@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
 		82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
-		82C2858C2CC8E918000CF5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2858B2CC8E918000CF5F7 /* ViewController.swift */; };
 		82C2858F2CC8E918000CF5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C2858D2CC8E918000CF5F7 /* Main.storyboard */; };
 		82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */; };
 		82C285942CC8E91A000CF5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C285932CC8E91A000CF5F7 /* Assets.xcassets */; };
@@ -17,6 +16,114 @@
 		82C285A22CC8E91A000CF5F7 /* TrackingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285A12CC8E91A000CF5F7 /* TrackingAppTests.swift */; };
 		82C285AC2CC8E91A000CF5F7 /* TrackingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285AB2CC8E91A000CF5F7 /* TrackingAppUITests.swift */; };
 		82C285AE2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285AD2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift */; };
+		82C285BB2CC8E94B000CF5F7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */; };
+		82C285BD2CC8E9A4000CF5F7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */; };
+		82C285BF2CC8E9E4000CF5F7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */; };
+		82C285C02CC8E9E9000CF5F7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */; };
+		82C285C12CC8E9EB000CF5F7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */; };
+		82C285C32CC8EA2F000CF5F7 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */; };
+		82C285C52CC8EA4B000CF5F7 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */; };
+		82C285C72CC8EAA0000CF5F7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */; };
+		82C285C92CC8EAB1000CF5F7 /* TripCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */; };
+		82C285CB2CC8EACD000CF5F7 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */; };
+		82C285CD2CC8EAE2000CF5F7 /* TripEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */; };
+		82C285CE2CC8EB75000CF5F7 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */; };
+		82C285D02CC8ECD5000CF5F7 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CF2CC8ECD5000CF5F7 /* AppDelegateTests.swift */; };
+		82C285D62CC8EEE2000CF5F7 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */; };
+		82C285D82CC8F1AC000CF5F7 /* LocationPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */; };
+		82C285DA2CC8F26C000CF5F7 /* LocationPermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */; };
+		82C285DC2CC8F2B6000CF5F7 /* LocationPermissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285DB2CC8F2B6000CF5F7 /* LocationPermissionTests.swift */; };
+		82C285E12CC8F367000CF5F7 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */; };
+		82C285E82CC90330000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */; };
+		82C285EA2CC90353000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */; };
+		82C285EC2CC9037E000CF5F7 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */; };
+		82C285EE2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */; };
+		82C285F02CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */; };
+		82C285F42CC90404000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
+		82C285F62CC90466000CF5F7 /* MapViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */; };
+		82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */; };
+		82C285FA2CC909A7000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
+		82C285FB2CC909AA000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
+		82C285FC2CC909B0000CF5F7 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */; };
+		82C285FD2CC909B4000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
+		82C285FE2CC909B8000CF5F7 /* LocationPermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */; };
+		82C285FF2CC909BA000CF5F7 /* LocationPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */; };
+		82C286012CC90A20000CF5F7 /* MotionActivityManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */; };
+		82C286032CC90BE5000CF5F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286022CC90BE5000CF5F7 /* LoadingView.swift */; };
+		82C286052CC90C09000CF5F7 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286042CC90C09000CF5F7 /* EmptyStateView.swift */; };
+		82C286072CC90D03000CF5F7 /* TripsViewController+TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */; };
+		82C286092CC90DCD000CF5F7 /* TripsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286082CC90DCD000CF5F7 /* TripsViewControllerTests.swift */; };
+		82C2860A2CC90E32000CF5F7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */; };
+		82C2860B2CC90E36000CF5F7 /* TripsViewController+TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */; };
+		82C2860C2CC90E3C000CF5F7 /* MapViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */; };
+		82C2860D2CC90E42000CF5F7 /* TripsViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */; };
+		82C2860F2CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */; };
+		82C286102CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */; };
+		82C286152CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */; };
+		82C286162CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */; };
+		82C286182CC915FB000CF5F7 /* TripStatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286172CC915FB000CF5F7 /* TripStatCardView.swift */; };
+		82C286192CC915FB000CF5F7 /* TripStatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286172CC915FB000CF5F7 /* TripStatCardView.swift */; };
+		82C2861B2CC9171E000CF5F7 /* TripStatCardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861A2CC9171E000CF5F7 /* TripStatCardViewTests.swift */; };
+		82C2861D2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */; };
+		82C2861E2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */; };
+		82C286202CC918B2000CF5F7 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861F2CC918B2000CF5F7 /* CoordinatorTests.swift */; };
+		82C286212CC91C47000CF5F7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */; };
+		82C286222CC91C5E000CF5F7 /* TripEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */; };
+		82C286232CC91CB3000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */; };
+		82C286242CC91CB6000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */; };
+		82C286252CC91CB9000CF5F7 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */; };
+		82C286262CC91CBA000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */; };
+		82C286272CC91CBD000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */; };
+		82C286282CC91CBF000CF5F7 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */; };
+		82C286292CC91CC3000CF5F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286022CC90BE5000CF5F7 /* LoadingView.swift */; };
+		82C2862A2CC91CC5000CF5F7 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286042CC90C09000CF5F7 /* EmptyStateView.swift */; };
+		82C2862B2CC91CCA000CF5F7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */; };
+		82C2862C2CC91CDE000CF5F7 /* TripCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */; };
+		82C2862D2CC91CE3000CF5F7 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */; };
+		82C2862E2CC91CE9000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
+		82C2862F2CC91CEC000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
+		82C286312CC91FD7000CF5F7 /* MockDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286302CC91FD7000CF5F7 /* MockDataHelper.swift */; };
+		82C286332CC91FFA000CF5F7 /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286322CC91FFA000CF5F7 /* XCTestCase+Helpers.swift */; };
+		82C286342CC9201A000CF5F7 /* TripEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */; };
+		82C286352CC9203E000CF5F7 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */; };
+		82C286362CC92041000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */; };
+		82C286372CC92043000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */; };
+		82C286382CC92045000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */; };
+		82C286392CC92047000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */; };
+		82C2863A2CC9204C000CF5F7 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286042CC90C09000CF5F7 /* EmptyStateView.swift */; };
+		82C2863B2CC9204E000CF5F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286022CC90BE5000CF5F7 /* LoadingView.swift */; };
+		82C2863C2CC92050000CF5F7 /* TripStatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286172CC915FB000CF5F7 /* TripStatCardView.swift */; };
+		82C2863D2CC92053000CF5F7 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */; };
+		82C2863E2CC92058000CF5F7 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */; };
+		82C2863F2CC9205C000CF5F7 /* TripsViewController+TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */; };
+		82C286402CC9205E000CF5F7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */; };
+		82C286412CC92060000CF5F7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */; };
+		82C286422CC92063000CF5F7 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */; };
+		82C286432CC92066000CF5F7 /* TripsViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */; };
+		82C286442CC9206B000CF5F7 /* MapViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */; };
+		82C286452CC92071000CF5F7 /* LocationPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */; };
+		82C286462CC92073000CF5F7 /* LocationPermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */; };
+		82C286472CC92075000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
+		82C286482CC92078000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
+		82C286492CC9207A000CF5F7 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */; };
+		82C2864A2CC9207D000CF5F7 /* TripCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */; };
+		82C2864B2CC9207F000CF5F7 /* StatisticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */; };
+		82C2864C2CC92082000CF5F7 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */; };
+		82C2864D2CC92084000CF5F7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */; };
+		82C2864E2CC92088000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
+		82C2864F2CC9208A000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
+		82C286512CC931C0000CF5F7 /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286502CC931C0000CF5F7 /* StatCardView.swift */; };
+		82C286522CC931C0000CF5F7 /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286502CC931C0000CF5F7 /* StatCardView.swift */; };
+		82C286532CC931C0000CF5F7 /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286502CC931C0000CF5F7 /* StatCardView.swift */; };
+		82C286552CC953B9000CF5F7 /* TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286542CC953B9000CF5F7 /* TransportationMode.swift */; };
+		82C286562CC953B9000CF5F7 /* TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286542CC953B9000CF5F7 /* TransportationMode.swift */; };
+		82C286572CC953B9000CF5F7 /* TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286542CC953B9000CF5F7 /* TransportationMode.swift */; };
+		82C286592CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */; };
+		82C2865A2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */; };
+		82C2865B2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */; };
+		82C2865E2CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
+		82C2865F2CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
+		82C286602CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +147,6 @@
 		82C285842CC8E918000CF5F7 /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285872CC8E918000CF5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C285892CC8E918000CF5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82C2858B2CC8E918000CF5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82C2858E2CC8E918000CF5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82C285912CC8E918000CF5F7 /* TrackingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackingApp.xcdatamodel; sourceTree = "<group>"; };
 		82C285932CC8E91A000CF5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +157,46 @@
 		82C285A72CC8E91A000CF5F7 /* TrackingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285AB2CC8E91A000CF5F7 /* TrackingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingAppUITests.swift; sourceTree = "<group>"; };
 		82C285AD2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedView.swift; sourceTree = "<group>"; };
+		82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCoordinator.swift; sourceTree = "<group>"; };
+		82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
+		82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEntity.swift; sourceTree = "<group>"; };
+		82C285CF2CC8ECD5000CF5F7 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocationManager.swift; sourceTree = "<group>"; };
+		82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionChecker.swift; sourceTree = "<group>"; };
+		82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionAlert.swift; sourceTree = "<group>"; };
+		82C285DB2CC8F2B6000CF5F7 /* LocationPermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionTests.swift; sourceTree = "<group>"; };
+		82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		82C285F32CC90404000CF5F7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewModel+CoreData.swift"; sourceTree = "<group>"; };
+		82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripsViewModel+CoreData.swift"; sourceTree = "<group>"; };
+		82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionActivityManager.swift; sourceTree = "<group>"; };
+		82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionActivityManagerTests.swift; sourceTree = "<group>"; };
+		82C286022CC90BE5000CF5F7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		82C286042CC90C09000CF5F7 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripsViewController+TripCell.swift"; sourceTree = "<group>"; };
+		82C286082CC90DCD000CF5F7 /* TripsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewControllerTests.swift; sourceTree = "<group>"; };
+		82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		82C286172CC915FB000CF5F7 /* TripStatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatCardView.swift; sourceTree = "<group>"; };
+		82C2861A2CC9171E000CF5F7 /* TripStatCardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatCardViewTests.swift; sourceTree = "<group>"; };
+		82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCoordinator.swift; sourceTree = "<group>"; };
+		82C2861F2CC918B2000CF5F7 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		82C286302CC91FD7000CF5F7 /* MockDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataHelper.swift; sourceTree = "<group>"; };
+		82C286322CC91FFA000CF5F7 /* XCTestCase+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Helpers.swift"; sourceTree = "<group>"; };
+		82C286502CC931C0000CF5F7 /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
+		82C286542CC953B9000CF5F7 /* TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationMode.swift; sourceTree = "<group>"; };
+		82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+TransportationMode.swift"; sourceTree = "<group>"; };
+		82C2865D2CC9599F000CF5F7 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +247,14 @@
 		82C285862CC8E918000CF5F7 /* TrackingApp */ = {
 			isa = PBXGroup;
 			children = (
-				82C285872CC8E918000CF5F7 /* AppDelegate.swift */,
-				82C285892CC8E918000CF5F7 /* SceneDelegate.swift */,
-				82C2858B2CC8E918000CF5F7 /* ViewController.swift */,
-				82C2858D2CC8E918000CF5F7 /* Main.storyboard */,
-				82C285932CC8E91A000CF5F7 /* Assets.xcassets */,
-				82C285952CC8E91A000CF5F7 /* LaunchScreen.storyboard */,
-				82C285982CC8E91A000CF5F7 /* Info.plist */,
 				82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */,
+				82C285982CC8E91A000CF5F7 /* Info.plist */,
+				82C285DD2CC8F30F000CF5F7 /* Application */,
+				82C285E62CC8F493000CF5F7 /* Resources */,
+				82C285DE2CC8F32B000CF5F7 /* Core */,
+				82C285E32CC8F389000CF5F7 /* ViewControllers */,
+				82C285E52CC8F3AB000CF5F7 /* Entities */,
+				82C285E42CC8F394000CF5F7 /* Views */,
 			);
 			path = TrackingApp;
 			sourceTree = "<group>";
@@ -116,7 +262,13 @@
 		82C285A02CC8E91A000CF5F7 /* TrackingAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				82C285CF2CC8ECD5000CF5F7 /* AppDelegateTests.swift */,
+				82C2861F2CC918B2000CF5F7 /* CoordinatorTests.swift */,
+				82C285DB2CC8F2B6000CF5F7 /* LocationPermissionTests.swift */,
+				82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */,
 				82C285A12CC8E91A000CF5F7 /* TrackingAppTests.swift */,
+				82C2861A2CC9171E000CF5F7 /* TripStatCardViewTests.swift */,
+				82C286082CC90DCD000CF5F7 /* TripsViewControllerTests.swift */,
 			);
 			path = TrackingAppTests;
 			sourceTree = "<group>";
@@ -125,9 +277,138 @@
 			isa = PBXGroup;
 			children = (
 				82C285AB2CC8E91A000CF5F7 /* TrackingAppUITests.swift */,
+				82C286302CC91FD7000CF5F7 /* MockDataHelper.swift */,
+				82C286322CC91FFA000CF5F7 /* XCTestCase+Helpers.swift */,
 				82C285AD2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift */,
 			);
 			path = TrackingAppUITests;
+			sourceTree = "<group>";
+		};
+		82C285DD2CC8F30F000CF5F7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				82C285872CC8E918000CF5F7 /* AppDelegate.swift */,
+				82C285892CC8E918000CF5F7 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		82C285DE2CC8F32B000CF5F7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				82C2865C2CC9596C000CF5F7 /* Categories */,
+				82C285DF2CC8F332000CF5F7 /* Coordinators */,
+				82C285E22CC8F37A000CF5F7 /* Services */,
+				82C285E02CC8F360000CF5F7 /* ViewModels */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		82C285DF2CC8F332000CF5F7 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */,
+				82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */,
+				82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */,
+				82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		82C285E02CC8F360000CF5F7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */,
+				82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */,
+				82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */,
+				82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */,
+				82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		82C285E22CC8F37A000CF5F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */,
+				82C285F32CC90404000CF5F7 /* CoreDataManager.swift */,
+				82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */,
+				82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */,
+				82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */,
+				82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82C285E32CC8F389000CF5F7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */,
+				82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */,
+				82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */,
+				82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		82C285E42CC8F394000CF5F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */,
+				82C286172CC915FB000CF5F7 /* TripStatCardView.swift */,
+				82C286502CC931C0000CF5F7 /* StatCardView.swift */,
+				82C286022CC90BE5000CF5F7 /* LoadingView.swift */,
+				82C286042CC90C09000CF5F7 /* EmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82C285E52CC8F3AB000CF5F7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				82C285F12CC903E4000CF5F7 /* Trip */,
+				82C285F22CC903ED000CF5F7 /* Location */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		82C285E62CC8F493000CF5F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82C285932CC8E91A000CF5F7 /* Assets.xcassets */,
+				82C285952CC8E91A000CF5F7 /* LaunchScreen.storyboard */,
+				82C2858D2CC8E918000CF5F7 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82C285F12CC903E4000CF5F7 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */,
+				82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */,
+				82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		82C285F22CC903ED000CF5F7 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */,
+				82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */,
+				82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		82C2865C2CC9596C000CF5F7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				82C286542CC953B9000CF5F7 /* TransportationMode.swift */,
+				82C2865D2CC9599F000CF5F7 /* LoadingState.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +542,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C285C52CC8EA4B000CF5F7 /* MapCoordinator.swift in Sources */,
+				82C285CB2CC8EACD000CF5F7 /* TripsViewModel.swift in Sources */,
+				82C286152CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */,
+				82C285F62CC90466000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
+				82C2860F2CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */,
-				82C2858C2CC8E918000CF5F7 /* ViewController.swift in Sources */,
+				82C285D62CC8EEE2000CF5F7 /* AppLocationManager.swift in Sources */,
+				82C286182CC915FB000CF5F7 /* TripStatCardView.swift in Sources */,
+				82C285BB2CC8E94B000CF5F7 /* AppCoordinator.swift in Sources */,
+				82C285D82CC8F1AC000CF5F7 /* LocationPermissionChecker.swift in Sources */,
 				82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */,
+				82C285EC2CC9037E000CF5F7 /* LocationEntity.swift in Sources */,
+				82C286552CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
 				82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */,
+				82C285EE2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
+				82C285C92CC8EAB1000CF5F7 /* TripCoordinator.swift in Sources */,
+				82C285E82CC90330000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
+				82C285F42CC90404000CF5F7 /* CoreDataManager.swift in Sources */,
+				82C285BD2CC8E9A4000CF5F7 /* MapViewModel.swift in Sources */,
+				82C286072CC90D03000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
+				82C285C32CC8EA2F000CF5F7 /* SpeedView.swift in Sources */,
+				82C285CD2CC8EAE2000CF5F7 /* TripEntity.swift in Sources */,
+				82C2865E2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
+				82C285F02CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
+				82C286052CC90C09000CF5F7 /* EmptyStateView.swift in Sources */,
+				82C286032CC90BE5000CF5F7 /* LoadingView.swift in Sources */,
+				82C285DA2CC8F26C000CF5F7 /* LocationPermissionAlert.swift in Sources */,
+				82C285EA2CC90353000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
+				82C2861D2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */,
+				82C285FA2CC909A7000CF5F7 /* MotionActivityManager.swift in Sources */,
+				82C286592CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
+				82C285BF2CC8E9E4000CF5F7 /* MapViewController.swift in Sources */,
+				82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
+				82C286512CC931C0000CF5F7 /* StatCardView.swift in Sources */,
+				82C285C72CC8EAA0000CF5F7 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +584,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C285DC2CC8F2B6000CF5F7 /* LocationPermissionTests.swift in Sources */,
+				82C2865A2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
+				82C2862C2CC91CDE000CF5F7 /* TripCoordinator.swift in Sources */,
+				82C286092CC90DCD000CF5F7 /* TripsViewControllerTests.swift in Sources */,
+				82C285FF2CC909BA000CF5F7 /* LocationPermissionChecker.swift in Sources */,
+				82C285D02CC8ECD5000CF5F7 /* AppDelegateTests.swift in Sources */,
+				82C2860D2CC90E42000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
+				82C286232CC91CB3000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
+				82C286012CC90A20000CF5F7 /* MotionActivityManagerTests.swift in Sources */,
+				82C286212CC91C47000CF5F7 /* AppCoordinator.swift in Sources */,
+				82C286222CC91C5E000CF5F7 /* TripEntity.swift in Sources */,
+				82C285FB2CC909AA000CF5F7 /* MotionActivityManager.swift in Sources */,
+				82C286102CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
+				82C2862E2CC91CE9000CF5F7 /* AppDelegate.swift in Sources */,
+				82C2860C2CC90E3C000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
+				82C2860A2CC90E32000CF5F7 /* TripsViewController.swift in Sources */,
 				82C285A22CC8E91A000CF5F7 /* TrackingAppTests.swift in Sources */,
+				82C286282CC91CBF000CF5F7 /* SpeedView.swift in Sources */,
+				82C285FC2CC909B0000CF5F7 /* AppLocationManager.swift in Sources */,
+				82C286562CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
+				82C286262CC91CBA000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
+				82C286272CC91CBD000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
+				82C286242CC91CB6000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
+				82C285CE2CC8EB75000CF5F7 /* TripsViewModel.swift in Sources */,
+				82C2861B2CC9171E000CF5F7 /* TripStatCardViewTests.swift in Sources */,
+				82C286202CC918B2000CF5F7 /* CoordinatorTests.swift in Sources */,
+				82C286522CC931C0000CF5F7 /* StatCardView.swift in Sources */,
+				82C2862F2CC91CEC000CF5F7 /* SceneDelegate.swift in Sources */,
+				82C2862D2CC91CE3000CF5F7 /* MapCoordinator.swift in Sources */,
+				82C2862B2CC91CCA000CF5F7 /* MapViewController.swift in Sources */,
+				82C285FE2CC909B8000CF5F7 /* LocationPermissionAlert.swift in Sources */,
+				82C2861E2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */,
+				82C285FD2CC909B4000CF5F7 /* CoreDataManager.swift in Sources */,
+				82C286162CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */,
+				82C2862A2CC91CC5000CF5F7 /* EmptyStateView.swift in Sources */,
+				82C2860B2CC90E36000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
+				82C286192CC915FB000CF5F7 /* TripStatCardView.swift in Sources */,
+				82C286252CC91CB9000CF5F7 /* LocationEntity.swift in Sources */,
+				82C2865F2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
+				82C286292CC91CC3000CF5F7 /* LoadingView.swift in Sources */,
+				82C285C02CC8E9E9000CF5F7 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +632,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C286332CC91FFA000CF5F7 /* XCTestCase+Helpers.swift in Sources */,
+				82C286452CC92071000CF5F7 /* LocationPermissionChecker.swift in Sources */,
+				82C286482CC92078000CF5F7 /* MotionActivityManager.swift in Sources */,
+				82C286382CC92045000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
+				82C286492CC9207A000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C285AC2CC8E91A000CF5F7 /* TrackingAppUITests.swift in Sources */,
+				82C286412CC92060000CF5F7 /* MapViewController.swift in Sources */,
+				82C285E12CC8F367000CF5F7 /* TripsViewModel.swift in Sources */,
 				82C285AE2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift in Sources */,
+				82C2863B2CC9204E000CF5F7 /* LoadingView.swift in Sources */,
+				82C2863F2CC9205C000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
+				82C2863D2CC92053000CF5F7 /* SpeedView.swift in Sources */,
+				82C286602CC9599F000CF5F7 /* LoadingState.swift in Sources */,
+				82C286572CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
+				82C286532CC931C0000CF5F7 /* StatCardView.swift in Sources */,
+				82C2863E2CC92058000CF5F7 /* StatisticsViewController.swift in Sources */,
+				82C2863A2CC9204C000CF5F7 /* EmptyStateView.swift in Sources */,
+				82C2865B2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
+				82C2864C2CC92082000CF5F7 /* MapCoordinator.swift in Sources */,
+				82C286462CC92073000CF5F7 /* LocationPermissionAlert.swift in Sources */,
+				82C2863C2CC92050000CF5F7 /* TripStatCardView.swift in Sources */,
+				82C2864A2CC9207D000CF5F7 /* TripCoordinator.swift in Sources */,
+				82C286432CC92066000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
+				82C286392CC92047000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
+				82C2864D2CC92084000CF5F7 /* AppCoordinator.swift in Sources */,
+				82C285C12CC8E9EB000CF5F7 /* MapViewModel.swift in Sources */,
+				82C286372CC92043000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
+				82C2864B2CC9207F000CF5F7 /* StatisticsCoordinator.swift in Sources */,
+				82C286402CC9205E000CF5F7 /* TripsViewController.swift in Sources */,
+				82C286352CC9203E000CF5F7 /* LocationEntity.swift in Sources */,
+				82C286472CC92075000CF5F7 /* CoreDataManager.swift in Sources */,
+				82C286422CC92063000CF5F7 /* StatisticsViewModel.swift in Sources */,
+				82C286342CC9201A000CF5F7 /* TripEntity.swift in Sources */,
+				82C2864E2CC92088000CF5F7 /* SceneDelegate.swift in Sources */,
+				82C286312CC91FD7000CF5F7 /* MockDataHelper.swift in Sources */,
+				82C286442CC9206B000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
+				82C2864F2CC9208A000CF5F7 /* AppDelegate.swift in Sources */,
+				82C286362CC92041000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +837,14 @@
 				DEVELOPMENT_TEAM = 75SEZC5TGW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track your trips and show your position on the map.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to access motion and fitness activity to automatically detect when you start and stop traveling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,11 +868,14 @@
 				DEVELOPMENT_TEAM = 75SEZC5TGW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track your trips and show your position on the map.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to access motion and fitness activity to automatically detect when you start and stop traveling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
