@@ -42,13 +42,10 @@
 		82C285F42CC90404000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
 		82C285F62CC90466000CF5F7 /* MapViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */; };
 		82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */; };
-		82C285FA2CC909A7000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
-		82C285FB2CC909AA000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
 		82C285FC2CC909B0000CF5F7 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */; };
 		82C285FD2CC909B4000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
 		82C285FE2CC909B8000CF5F7 /* LocationPermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */; };
 		82C285FF2CC909BA000CF5F7 /* LocationPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */; };
-		82C286012CC90A20000CF5F7 /* MotionActivityManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */; };
 		82C286032CC90BE5000CF5F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286022CC90BE5000CF5F7 /* LoadingView.swift */; };
 		82C286052CC90C09000CF5F7 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286042CC90C09000CF5F7 /* EmptyStateView.swift */; };
 		82C286072CC90D03000CF5F7 /* TripsViewController+TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */; };
@@ -104,7 +101,6 @@
 		82C286452CC92071000CF5F7 /* LocationPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */; };
 		82C286462CC92073000CF5F7 /* LocationPermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */; };
 		82C286472CC92075000CF5F7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F32CC90404000CF5F7 /* CoreDataManager.swift */; };
-		82C286482CC92078000CF5F7 /* MotionActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */; };
 		82C286492CC9207A000CF5F7 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */; };
 		82C2864A2CC9207D000CF5F7 /* TripCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285C82CC8EAB1000CF5F7 /* TripCoordinator.swift */; };
 		82C2864B2CC9207F000CF5F7 /* StatisticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */; };
@@ -124,6 +120,22 @@
 		82C2865E2CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
 		82C2865F2CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
 		82C286602CC9599F000CF5F7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2865D2CC9599F000CF5F7 /* LoadingState.swift */; };
+		82C286622CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */; };
+		82C286632CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */; };
+		82C286642CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */; };
+		82C286662CC96A91000CF5F7 /* TransportationModeDetectionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286652CC96A91000CF5F7 /* TransportationModeDetectionServiceTests.swift */; };
+		82C286682CC96D53000CF5F7 /* AppLocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286672CC96D53000CF5F7 /* AppLocationManagerTests.swift */; };
+		82C2866A2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286692CC96DB8000CF5F7 /* Notifications+Names.swift */; };
+		82C2866B2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286692CC96DB8000CF5F7 /* Notifications+Names.swift */; };
+		82C2866C2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286692CC96DB8000CF5F7 /* Notifications+Names.swift */; };
+		82C2866E2CC96E5C000CF5F7 /* AppNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2866D2CC96E5C000CF5F7 /* AppNotificationsTests.swift */; };
+		82C286702CC97049000CF5F7 /* GeofencingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2866F2CC97049000CF5F7 /* GeofencingService.swift */; };
+		82C286712CC97049000CF5F7 /* GeofencingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2866F2CC97049000CF5F7 /* GeofencingService.swift */; };
+		82C286722CC97049000CF5F7 /* GeofencingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2866F2CC97049000CF5F7 /* GeofencingService.swift */; };
+		82C286752CC970F9000CF5F7 /* GeofencingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286742CC970F9000CF5F7 /* GeofencingServiceTests.swift */; };
+		82C286772CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */; };
+		82C286782CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */; };
+		82C286792CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,8 +191,6 @@
 		82C285F32CC90404000CF5F7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewModel+CoreData.swift"; sourceTree = "<group>"; };
 		82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripsViewModel+CoreData.swift"; sourceTree = "<group>"; };
-		82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionActivityManager.swift; sourceTree = "<group>"; };
-		82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionActivityManagerTests.swift; sourceTree = "<group>"; };
 		82C286022CC90BE5000CF5F7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		82C286042CC90C09000CF5F7 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripsViewController+TripCell.swift"; sourceTree = "<group>"; };
@@ -197,6 +207,14 @@
 		82C286542CC953B9000CF5F7 /* TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationMode.swift; sourceTree = "<group>"; };
 		82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+TransportationMode.swift"; sourceTree = "<group>"; };
 		82C2865D2CC9599F000CF5F7 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationModeDetectionService.swift; sourceTree = "<group>"; };
+		82C286652CC96A91000CF5F7 /* TransportationModeDetectionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationModeDetectionServiceTests.swift; sourceTree = "<group>"; };
+		82C286672CC96D53000CF5F7 /* AppLocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocationManagerTests.swift; sourceTree = "<group>"; };
+		82C286692CC96DB8000CF5F7 /* Notifications+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Names.swift"; sourceTree = "<group>"; };
+		82C2866D2CC96E5C000CF5F7 /* AppNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationsTests.swift; sourceTree = "<group>"; };
+		82C2866F2CC97049000CF5F7 /* GeofencingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingService.swift; sourceTree = "<group>"; };
+		82C286742CC970F9000CF5F7 /* GeofencingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingServiceTests.swift; sourceTree = "<group>"; };
+		82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppLocationManager+Geofencing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */,
+				82C286732CC97096000CF5F7 /* Extensions */,
 				82C285982CC8E91A000CF5F7 /* Info.plist */,
 				82C285DD2CC8F30F000CF5F7 /* Application */,
 				82C285E62CC8F493000CF5F7 /* Resources */,
@@ -263,10 +282,13 @@
 			isa = PBXGroup;
 			children = (
 				82C285CF2CC8ECD5000CF5F7 /* AppDelegateTests.swift */,
+				82C286742CC970F9000CF5F7 /* GeofencingServiceTests.swift */,
+				82C286672CC96D53000CF5F7 /* AppLocationManagerTests.swift */,
+				82C2866D2CC96E5C000CF5F7 /* AppNotificationsTests.swift */,
 				82C2861F2CC918B2000CF5F7 /* CoordinatorTests.swift */,
 				82C285DB2CC8F2B6000CF5F7 /* LocationPermissionTests.swift */,
-				82C286002CC90A20000CF5F7 /* MotionActivityManagerTests.swift */,
 				82C285A12CC8E91A000CF5F7 /* TrackingAppTests.swift */,
+				82C286652CC96A91000CF5F7 /* TransportationModeDetectionServiceTests.swift */,
 				82C2861A2CC9171E000CF5F7 /* TripStatCardViewTests.swift */,
 				82C286082CC90DCD000CF5F7 /* TripsViewControllerTests.swift */,
 			);
@@ -331,11 +353,13 @@
 			isa = PBXGroup;
 			children = (
 				82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */,
+				82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */,
 				82C285F32CC90404000CF5F7 /* CoreDataManager.swift */,
 				82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */,
+				82C2866F2CC97049000CF5F7 /* GeofencingService.swift */,
 				82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */,
 				82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */,
-				82C285F92CC909A7000CF5F7 /* MotionActivityManager.swift */,
+				82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -409,6 +433,14 @@
 				82C2865D2CC9599F000CF5F7 /* LoadingState.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		82C286732CC97096000CF5F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82C286692CC96DB8000CF5F7 /* Notifications+Names.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,9 +576,11 @@
 			files = (
 				82C285C52CC8EA4B000CF5F7 /* MapCoordinator.swift in Sources */,
 				82C285CB2CC8EACD000CF5F7 /* TripsViewModel.swift in Sources */,
+				82C286702CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286152CC915BA000CF5F7 /* StatisticsViewController.swift in Sources */,
 				82C285F62CC90466000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
 				82C2860F2CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
+				82C2866A2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */,
 				82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */,
 				82C285D62CC8EEE2000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C286182CC915FB000CF5F7 /* TripStatCardView.swift in Sources */,
@@ -557,11 +591,13 @@
 				82C286552CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
 				82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */,
 				82C285EE2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
+				82C286772CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C285C92CC8EAB1000CF5F7 /* TripCoordinator.swift in Sources */,
 				82C285E82CC90330000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
 				82C285F42CC90404000CF5F7 /* CoreDataManager.swift in Sources */,
 				82C285BD2CC8E9A4000CF5F7 /* MapViewModel.swift in Sources */,
 				82C286072CC90D03000CF5F7 /* TripsViewController+TripCell.swift in Sources */,
+				82C286622CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
 				82C285C32CC8EA2F000CF5F7 /* SpeedView.swift in Sources */,
 				82C285CD2CC8EAE2000CF5F7 /* TripEntity.swift in Sources */,
 				82C2865E2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
@@ -571,7 +607,6 @@
 				82C285DA2CC8F26C000CF5F7 /* LocationPermissionAlert.swift in Sources */,
 				82C285EA2CC90353000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C2861D2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */,
-				82C285FA2CC909A7000CF5F7 /* MotionActivityManager.swift in Sources */,
 				82C286592CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
 				82C285BF2CC8E9E4000CF5F7 /* MapViewController.swift in Sources */,
 				82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
@@ -592,24 +627,29 @@
 				82C285D02CC8ECD5000CF5F7 /* AppDelegateTests.swift in Sources */,
 				82C2860D2CC90E42000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
 				82C286232CC91CB3000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
-				82C286012CC90A20000CF5F7 /* MotionActivityManagerTests.swift in Sources */,
+				82C286682CC96D53000CF5F7 /* AppLocationManagerTests.swift in Sources */,
+				82C286632CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
+				82C286712CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286212CC91C47000CF5F7 /* AppCoordinator.swift in Sources */,
 				82C286222CC91C5E000CF5F7 /* TripEntity.swift in Sources */,
-				82C285FB2CC909AA000CF5F7 /* MotionActivityManager.swift in Sources */,
 				82C286102CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C2862E2CC91CE9000CF5F7 /* AppDelegate.swift in Sources */,
 				82C2860C2CC90E3C000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
 				82C2860A2CC90E32000CF5F7 /* TripsViewController.swift in Sources */,
+				82C2866B2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */,
 				82C285A22CC8E91A000CF5F7 /* TrackingAppTests.swift in Sources */,
 				82C286282CC91CBF000CF5F7 /* SpeedView.swift in Sources */,
+				82C286782CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C285FC2CC909B0000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C286562CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
+				82C286662CC96A91000CF5F7 /* TransportationModeDetectionServiceTests.swift in Sources */,
 				82C286262CC91CBA000CF5F7 /* LocationEntity+CoreDataClass.swift in Sources */,
 				82C286272CC91CBD000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
 				82C286242CC91CB6000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C285CE2CC8EB75000CF5F7 /* TripsViewModel.swift in Sources */,
 				82C2861B2CC9171E000CF5F7 /* TripStatCardViewTests.swift in Sources */,
 				82C286202CC918B2000CF5F7 /* CoordinatorTests.swift in Sources */,
+				82C2866E2CC96E5C000CF5F7 /* AppNotificationsTests.swift in Sources */,
 				82C286522CC931C0000CF5F7 /* StatCardView.swift in Sources */,
 				82C2862F2CC91CEC000CF5F7 /* SceneDelegate.swift in Sources */,
 				82C2862D2CC91CE3000CF5F7 /* MapCoordinator.swift in Sources */,
@@ -624,6 +664,7 @@
 				82C286252CC91CB9000CF5F7 /* LocationEntity.swift in Sources */,
 				82C2865F2CC9599F000CF5F7 /* LoadingState.swift in Sources */,
 				82C286292CC91CC3000CF5F7 /* LoadingView.swift in Sources */,
+				82C286752CC970F9000CF5F7 /* GeofencingServiceTests.swift in Sources */,
 				82C285C02CC8E9E9000CF5F7 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,12 +673,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C286722CC97049000CF5F7 /* GeofencingService.swift in Sources */,
 				82C286332CC91FFA000CF5F7 /* XCTestCase+Helpers.swift in Sources */,
 				82C286452CC92071000CF5F7 /* LocationPermissionChecker.swift in Sources */,
-				82C286482CC92078000CF5F7 /* MotionActivityManager.swift in Sources */,
 				82C286382CC92045000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C286492CC9207A000CF5F7 /* AppLocationManager.swift in Sources */,
 				82C285AC2CC8E91A000CF5F7 /* TrackingAppUITests.swift in Sources */,
+				82C2866C2CC96DB8000CF5F7 /* Notifications+Names.swift in Sources */,
 				82C286412CC92060000CF5F7 /* MapViewController.swift in Sources */,
 				82C285E12CC8F367000CF5F7 /* TripsViewModel.swift in Sources */,
 				82C285AE2CC8E91A000CF5F7 /* TrackingAppUITestsLaunchTests.swift in Sources */,
@@ -648,6 +690,7 @@
 				82C286572CC953B9000CF5F7 /* TransportationMode.swift in Sources */,
 				82C286532CC931C0000CF5F7 /* StatCardView.swift in Sources */,
 				82C2863E2CC92058000CF5F7 /* StatisticsViewController.swift in Sources */,
+				82C286792CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift in Sources */,
 				82C2863A2CC9204C000CF5F7 /* EmptyStateView.swift in Sources */,
 				82C2865B2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
 				82C2864C2CC92082000CF5F7 /* MapCoordinator.swift in Sources */,
@@ -658,6 +701,7 @@
 				82C286392CC92047000CF5F7 /* TripEntity+CoreDataClass.swift in Sources */,
 				82C2864D2CC92084000CF5F7 /* AppCoordinator.swift in Sources */,
 				82C285C12CC8E9EB000CF5F7 /* MapViewModel.swift in Sources */,
+				82C286642CC96A3C000CF5F7 /* TransportationModeDetectionService.swift in Sources */,
 				82C286372CC92043000CF5F7 /* LocationEntity+CoreDataProperties.swift in Sources */,
 				82C2864B2CC9207F000CF5F7 /* StatisticsCoordinator.swift in Sources */,
 				82C286402CC9205E000CF5F7 /* TripsViewController.swift in Sources */,

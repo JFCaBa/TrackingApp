@@ -7,7 +7,6 @@
 
 import UIKit
 
-// MARK: - Trips Coordinator
 final class TripsCoordinator: Coordinator {
     func createViewController() -> UIViewController {
         let viewModel = TripsViewModel()

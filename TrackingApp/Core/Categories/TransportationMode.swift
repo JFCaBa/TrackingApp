@@ -109,7 +109,7 @@ enum TransportationMode: String, Codable, CaseIterable {
         
         // Calculate confidence based on multiple factors
         var bestMode = detect(speed: averageSpeed)
-        var confidence: Double = 0.0
+        var confidence = 0.0
         
         // Check if speeds are typical for the detected mode
         let isAvgSpeedTypical = bestMode.isTypicalSpeed(avgSpeedKmh)
@@ -149,7 +149,7 @@ extension Array where Element == Trip {
     }
     
     func statistics(for mode: TransportationMode) -> (count: Int, totalDistance: Double, averageSpeed: Double)? {
-        let modeTrips = self.filter { $0.transportationMode == mode }
+        let modeTrips = filter { $0.transportationMode == mode }
         guard !modeTrips.isEmpty else { return nil }
         
         let count = modeTrips.count

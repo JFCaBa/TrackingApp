@@ -5,9 +5,9 @@
 //  Created by Jose on 23/10/2024.
 //
 
-import UIKit
-import MapKit
 import Combine
+import MapKit
+import UIKit
 
 final class MapViewController: UIViewController {
     private let viewModel: MapViewModel
@@ -24,6 +24,7 @@ final class MapViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -160,6 +161,7 @@ final class MapViewController: UIViewController {
 }
 
 // MARK: - MKMapViewDelegate
+
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         guard let userLocation = userLocation.location else { return }
