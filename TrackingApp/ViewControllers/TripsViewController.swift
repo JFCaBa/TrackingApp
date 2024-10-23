@@ -12,6 +12,7 @@ final class TripsViewController: UIViewController {
     private let viewModel: TripsViewModel
     private let tableView = UITableView()
     private var cancellables = Set<AnyCancellable>()
+    weak var coordinator: TripsCoordinator?
     
     lazy var loadingView: LoadingView = {
         let view = LoadingView()
@@ -205,5 +206,13 @@ extension TripsViewController: UITableViewDelegate {
         }
         
         viewModel.deleteTrip(trips[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard case .loaded(let trips) = viewModel.state else { return }
+        let trip = trips[indexPath.row]
+        coordinator?.showTripDetails(for: trip)
     }
 }

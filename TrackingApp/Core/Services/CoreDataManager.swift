@@ -13,7 +13,7 @@ import UIKit
 final class CoreDataManager {
     static let shared = CoreDataManager()
     
-    private let persistentContainer: NSPersistentContainer
+    public let persistentContainer: NSPersistentContainer
     var currentTrip: TripEntity?
     
     private init() {
