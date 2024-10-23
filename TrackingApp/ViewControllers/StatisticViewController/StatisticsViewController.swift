@@ -125,7 +125,6 @@ final class StatisticsViewController: UIViewController {
     private func setupBindings() {
         viewModel.$state
             .receive(on: DispatchQueue.main)
-            .print("State Publisher")
             .compactMap { $0 }
             .sink { [weak self] state in
                 self?.handleState(state)
