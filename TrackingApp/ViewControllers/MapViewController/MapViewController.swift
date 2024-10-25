@@ -13,9 +13,15 @@ import MapKit
 import UIKit
 
 final class MapViewController: UIViewController {
+    // MARK: - Properties
+    
     private let viewModel: MapViewModel
     private let mapView = MKMapView()
     private let speedView = SpeedView()
+    private let modeLabel = PaddedLabel()
+    
+    // MARK: - Ivars
+    
     private var cancellables = Set<AnyCancellable>()
     private var isInitialLocation = true
     private var userTrackingButton: MKUserTrackingButton!
@@ -88,8 +94,49 @@ final class MapViewController: UIViewController {
             userTrackingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
             userTrackingButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
+        
+        setupModeLabel()
+        setupTransportationModeObserver()
     }
     
+    private func setupModeLabel() {
+        modeLabel.translatesAutoresizingMaskIntoConstraints = false
+        modeLabel.textAlignment = .center
+        modeLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        modeLabel.textColor = .white
+        modeLabel.layer.cornerRadius = 12
+        modeLabel.clipsToBounds = true
+        modeLabel.backgroundColor = .systemBlue
+        modeLabel.text = "Unknown"
+        modeLabel.isHidden = true
+        modeLabel.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        
+        view.addSubview(modeLabel)
+        
+        NSLayoutConstraint.activate([
+            modeLabel.bottomAnchor.constraint(equalTo: userTrackingButton.bottomAnchor),
+            modeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            modeLabel.heightAnchor.constraint(equalToConstant: 36)
+        ])
+    }
+    
+    private func setupTransportationModeObserver() {
+        NotificationCenter.default.publisher(for: .transportationModeDidChange)
+            .compactMap { $0.object as? TransportationMode }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] mode in
+                self?.updateModeLabel(mode)
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func updateModeLabel(_ mode: TransportationMode) {
+        modeLabel.text = mode.displayName
+        modeLabel.backgroundColor = mode.color
+        modeLabel.isHidden = false
+    }
+    
+    // MARK: - setupBindings()
     private func setupBindings() {
         viewModel.$currentSpeed
             .receive(on: DispatchQueue.main)
@@ -115,6 +162,8 @@ final class MapViewController: UIViewController {
             }
             .store(in: &cancellables)
     }
+    
+    // MARK: - Notifications
     
     private func setupNotificationObservers() {
         NotificationCenter.default.addObserver(

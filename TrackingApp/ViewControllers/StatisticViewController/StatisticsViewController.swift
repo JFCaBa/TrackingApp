@@ -12,7 +12,7 @@ import Combine
 import UIKit
 
 final class StatisticsViewController: UIViewController {
-    private let viewModel: StatisticsViewModel
+    public let viewModel: StatisticsViewModel
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - UI Components
@@ -69,6 +69,7 @@ final class StatisticsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupBindings()
+        setupNavigationMenu()
     }
     
     override func viewDidAppear(_ animated: Bool) {

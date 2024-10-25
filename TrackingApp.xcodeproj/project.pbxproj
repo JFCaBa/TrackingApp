@@ -24,6 +24,12 @@
 		828545492CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */; };
 		828545582CCBC3C20074EBF9 /* SpeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545572CCBC3C20074EBF9 /* SpeedViewTests.swift */; };
 		8285455A2CCBC3E40074EBF9 /* TripModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545592CCBC3E40074EBF9 /* TripModelTests.swift */; };
+		8285455E2CCBCC680074EBF9 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */; };
+		8285455F2CCBCC6C0074EBF9 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */; };
+		828545602CCBCC6D0074EBF9 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */; };
+		828545632CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
+		828545642CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
+		828545652CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
 		82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
 		82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
 		82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */; };
@@ -175,6 +181,8 @@
 		828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Locations.swift"; sourceTree = "<group>"; };
 		828545572CCBC3C20074EBF9 /* SpeedViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewTests.swift; sourceTree = "<group>"; };
 		828545592CCBC3E40074EBF9 /* TripModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelTests.swift; sourceTree = "<group>"; };
+		8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticsViewController+Menu.swift"; sourceTree = "<group>"; };
 		82C285842CC8E918000CF5F7 /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285872CC8E918000CF5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C285892CC8E918000CF5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */,
+				828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */,
 			);
 			path = StatisticViewController;
 			sourceTree = "<group>";
@@ -367,6 +376,14 @@
 			path = StatisticsViewModel;
 			sourceTree = "<group>";
 		};
+		828545612CCBCC790074EBF9 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
 		82C2857B2CC8E918000CF5F7 = {
 			isa = PBXGroup;
 			children = (
@@ -390,14 +407,15 @@
 		82C285862CC8E918000CF5F7 /* TrackingApp */ = {
 			isa = PBXGroup;
 			children = (
-				82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */,
+				82C285DD2CC8F30F000CF5F7 /* Application */,
+				82C285DE2CC8F32B000CF5F7 /* Core */,
+				82C285E52CC8F3AB000CF5F7 /* Entities */,
 				82C286732CC97096000CF5F7 /* Extensions */,
 				82C285982CC8E91A000CF5F7 /* Info.plist */,
-				82C285DD2CC8F30F000CF5F7 /* Application */,
 				82C285E62CC8F493000CF5F7 /* Resources */,
-				82C285DE2CC8F32B000CF5F7 /* Core */,
+				828545612CCBCC790074EBF9 /* Subclasses */,
+				82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */,
 				82C285E32CC8F389000CF5F7 /* ViewControllers */,
-				82C285E52CC8F3AB000CF5F7 /* Entities */,
 				82C285E42CC8F394000CF5F7 /* Views */,
 			);
 			path = TrackingApp;
@@ -732,9 +750,11 @@
 				82C285EA2CC90353000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C2861D2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */,
 				82C286592CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
+				828545632CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift in Sources */,
 				82C285BF2CC8E9E4000CF5F7 /* MapViewController.swift in Sources */,
 				82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
 				82C286512CC931C0000CF5F7 /* StatCardView.swift in Sources */,
+				8285455E2CCBCC680074EBF9 /* PaddedLabel.swift in Sources */,
 				82C285C72CC8EAA0000CF5F7 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,6 +775,7 @@
 				82C286212CC91C47000CF5F7 /* AppCoordinator.swift in Sources */,
 				828545442CC9979D0074EBF9 /* TripAnnotation.swift in Sources */,
 				82C286222CC91C5E000CF5F7 /* TripEntity.swift in Sources */,
+				828545642CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */,
 				82C286102CC9154E000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C2862E2CC91CE9000CF5F7 /* AppDelegate.swift in Sources */,
 				82C2860C2CC90E3C000CF5F7 /* MapViewModel+CoreData.swift in Sources */,
@@ -773,6 +794,7 @@
 				82C286242CC91CB6000CF5F7 /* TripEntity+CoreDataProperties.swift in Sources */,
 				82C285CE2CC8EB75000CF5F7 /* TripsViewModel.swift in Sources */,
 				82C2861B2CC9171E000CF5F7 /* TripStatCardViewTests.swift in Sources */,
+				8285455F2CCBCC6C0074EBF9 /* PaddedLabel.swift in Sources */,
 				82C286202CC918B2000CF5F7 /* CoordinatorTests.swift in Sources */,
 				82C2866E2CC96E5C000CF5F7 /* AppNotificationsTests.swift in Sources */,
 				82C286522CC931C0000CF5F7 /* StatCardView.swift in Sources */,
@@ -824,6 +846,7 @@
 				82C2865B2CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
 				82C2864C2CC92082000CF5F7 /* MapCoordinator.swift in Sources */,
 				82C286462CC92073000CF5F7 /* LocationPermissionAlert.swift in Sources */,
+				828545652CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */,
 				828545412CC997690074EBF9 /* TripStatsView.swift in Sources */,
 				82C2863C2CC92050000CF5F7 /* TripStatCardView.swift in Sources */,
 				82C2864A2CC9207D000CF5F7 /* TripCoordinator.swift in Sources */,
@@ -841,6 +864,7 @@
 				82C286472CC92075000CF5F7 /* CoreDataManager.swift in Sources */,
 				82C286422CC92063000CF5F7 /* StatisticsViewModel.swift in Sources */,
 				82C286342CC9201A000CF5F7 /* TripEntity.swift in Sources */,
+				828545602CCBCC6D0074EBF9 /* PaddedLabel.swift in Sources */,
 				82C2864E2CC92088000CF5F7 /* SceneDelegate.swift in Sources */,
 				82C286312CC91FD7000CF5F7 /* MockDataHelper.swift in Sources */,
 				82C286442CC9206B000CF5F7 /* MapViewModel+CoreData.swift in Sources */,

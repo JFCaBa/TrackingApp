@@ -11,13 +11,32 @@
 import UIKit
 
 final class StatisticsCoordinator: Coordinator {
-    func createViewController() -> UIViewController {
-        let viewModel = StatisticsViewModel()
-        let viewController = StatisticsViewController(viewModel: viewModel)
-        return viewController
+    private let navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
+        setupNavigationBarAppearance()
+    }
+    
+    private func setupNavigationBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .systemBackground
+        
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
+        navigationController.navigationBar.compactAppearance = appearance
     }
     
     func start() {
-        // Implementation for deeper navigation if needed
+        let viewModel = StatisticsViewModel()
+        let viewController = StatisticsViewController(viewModel: viewModel)
+        viewController.title = "Statistics"
+        navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    func createViewController() -> UIViewController {
+        start()
+        return navigationController
     }
 }
