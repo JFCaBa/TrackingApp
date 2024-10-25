@@ -85,6 +85,19 @@ final class CoreDataManager {
         }
     }
     
+    func deleteAllTrips() {
+        let context = persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = TripEntity.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try context.execute(batchDeleteRequest)
+            saveContext()
+        } catch {
+            print("Error deleting all trips: \(error)")
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func calculateTripStatistics(_ trip: TripEntity) {
