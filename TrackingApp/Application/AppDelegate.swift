@@ -4,17 +4,23 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Main application delegate handling core app lifecycle and setup
+//  Details: Manages app initialization, Core Data stack, and primary coordinators
+//
 
-import UIKit
+import BackgroundTasks
 import CoreData
+import UIKit
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     private var appCoordinator: AppCoordinator?
     
+    // MARK: - application(_:didFinishLaunchingWithOptions)
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppLocationManager.shared.startUpdatingLocation()
         TransportationModeDetectionService.shared.startMonitoring()
         
         setupWindow()
@@ -38,7 +44,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TrackingApp")
-        container.loadPersistentStores { [weak self] (storeDescription, error) in
+        container.loadPersistentStores { [weak self] _, error in
             if let error = error as NSError? {
                 self?.handlePersistentStoreError(error)
             }

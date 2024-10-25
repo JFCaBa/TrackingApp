@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Core Data stack and operations manager
+//  Details: Handles persistence and data operations
+//
 
 import Combine
 import CoreData
@@ -56,7 +59,8 @@ final class CoreDataManager {
                 do {
                     let tripEntities = try context.fetch(fetchRequest)
                     let trips = tripEntities.map { Trip(from: $0) }
-                    promise(.success(trips))
+                    let completedTrips = trips.filter({$0.endDate != nil})
+                    promise(.success(completedTrips))
                 } catch {
                     promise(.failure(error))
                 }

@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Speed display UI component
+//  Details: Shows current speed information
+//
 
 import UIKit
 

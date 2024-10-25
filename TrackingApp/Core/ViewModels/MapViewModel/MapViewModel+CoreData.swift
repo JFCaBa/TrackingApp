@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Core Data operations for map functionality
+//  Details: Manages persistence operations for map features
+//
 
 import CoreLocation
 

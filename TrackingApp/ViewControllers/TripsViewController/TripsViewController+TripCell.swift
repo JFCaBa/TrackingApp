@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Trip list cell configuration
+//  Details: Defines trip list item presentation
+//
 
 import UIKit
 

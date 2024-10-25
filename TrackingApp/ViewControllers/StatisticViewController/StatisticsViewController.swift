@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Statistics screen view controller
+//  Details: Displays trip and usage statistics
+//
 
 import Combine
 import UIKit

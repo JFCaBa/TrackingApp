@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Empty state UI component
+//  Details: Reusable empty state view
+//
 
 import UIKit
 

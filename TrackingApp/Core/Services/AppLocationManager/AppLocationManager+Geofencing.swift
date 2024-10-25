@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Geofencing extension for location manager
+//  Details: Adds geofencing capabilities to track parking locations
+//
 
 import CoreLocation
 
@@ -36,15 +39,5 @@ extension AppLocationManager {
                 self?.endCurrentTrip(at: location)
             }
             .store(in: &cancellables)
-    }
-    
-    private func startNewTrip() {
-        isTracking = true
-        CoreDataManager.shared.startNewTrip()
-    }
-    
-    private func endCurrentTrip(at location: CLLocation) {
-        isTracking = false
-        CoreDataManager.shared.endCurrentTrip()
     }
 }

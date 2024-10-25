@@ -24,7 +24,6 @@
 		828545492CC998230074EBF9 /* CoreDataManager+Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */; };
 		82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
 		82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
-		82C2858F2CC8E918000CF5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C2858D2CC8E918000CF5F7 /* Main.storyboard */; };
 		82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */; };
 		82C285942CC8E91A000CF5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C285932CC8E91A000CF5F7 /* Assets.xcassets */; };
 		82C285972CC8E91A000CF5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C285952CC8E91A000CF5F7 /* LaunchScreen.storyboard */; };
@@ -179,7 +178,6 @@
 		82C285842CC8E918000CF5F7 /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285872CC8E918000CF5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C285892CC8E918000CF5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82C2858E2CC8E918000CF5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82C285912CC8E918000CF5F7 /* TrackingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackingApp.xcdatamodel; sourceTree = "<group>"; };
 		82C285932CC8E91A000CF5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C285962CC8E91A000CF5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -530,7 +528,6 @@
 			children = (
 				82C285932CC8E91A000CF5F7 /* Assets.xcassets */,
 				82C285952CC8E91A000CF5F7 /* LaunchScreen.storyboard */,
-				82C2858D2CC8E918000CF5F7 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -678,7 +675,6 @@
 			files = (
 				82C285972CC8E91A000CF5F7 /* LaunchScreen.storyboard in Resources */,
 				82C285942CC8E91A000CF5F7 /* Assets.xcassets in Resources */,
-				82C2858F2CC8E918000CF5F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,14 +873,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		82C2858D2CC8E918000CF5F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82C2858E2CC8E918000CF5F7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		82C285952CC8E91A000CF5F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1025,13 +1013,14 @@
 				DEVELOPMENT_TEAM = 75SEZC5TGW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackingApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track your trips and show your position on the map.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to access motion and fitness activity to automatically detect when you start and stop traveling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1056,13 +1045,14 @@
 				DEVELOPMENT_TEAM = 75SEZC5TGW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackingApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need background location access to continue tracking your trips even when the app is not active.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track your trips and show your position on the map.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to access motion and fitness activity to automatically detect when you start and stop traveling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

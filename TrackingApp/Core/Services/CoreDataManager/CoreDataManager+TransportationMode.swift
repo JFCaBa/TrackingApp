@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Transportation mode Core Data operations
+//  Details: Handles mode detection and persistence
+//
 
 import CoreLocation
 import Foundation

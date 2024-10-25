@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Trips list view controller
+//  Details: Displays list of recorded trips
+//
 
 import Combine
 import UIKit
@@ -44,6 +47,10 @@ final class TripsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupBindings()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.loadTrips()
     }
     

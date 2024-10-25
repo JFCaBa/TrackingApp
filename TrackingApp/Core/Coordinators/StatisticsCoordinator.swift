@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Statistics-related navigation coordinator
+//  Details: Manages navigation and view creation for statistics screens
+//
 
 import UIKit
 

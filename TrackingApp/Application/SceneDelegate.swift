@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Scene lifecycle management for multi-window support
+//  Details: Handles scene-specific lifecycle events and window setup
+//
 
 import UIKit
 import Combine

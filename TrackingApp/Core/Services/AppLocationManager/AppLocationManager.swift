@@ -1,3 +1,14 @@
+//
+//  AppLocationManager.swift
+//  TrackingApp
+//
+//  Created by Jose on 23/10/2024.
+//
+//  Purpose: Core location management service
+//  Details: Handles location tracking, updates, and background location services
+//
+
+import BackgroundTasks
 import Combine
 import CoreLocation
 import UIKit
@@ -19,12 +30,16 @@ final class AppLocationManager: NSObject {
     // Constants for location tracking
     private let significantDistanceChange: Double = 10.0 // meters
     private let minimumAccuracy: Double = 20.0 // meters
-    private let stationaryThreshold: TimeInterval = 300 // 5 minutes
+    private let stationaryThreshold: TimeInterval = 60 // 1 minute
     private var lastSignificantMovement: Date?
     
     // Speed tracking
     private var speedReadings: [Double] = []
     private let maxSpeedReadings = 10 // For calculating rolling average
+    
+    // Background task
+    private let backgroundTaskIdentifier = "com.app.location.refresh"
+    private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
     
     // MARK: - Initialization
     
@@ -32,22 +47,31 @@ final class AppLocationManager: NSObject {
         super.init()
         setupLocationManager()
         setupTransportationModeObserver()
+        registerBackgroundTask()
     }
     
     // MARK: - Setup
     
     private func setupLocationManager() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.distanceFilter = significantDistanceChange
         locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.pausesLocationUpdatesAutomatically = true
         locationManager.activityType = .automotiveNavigation
         
-        // Register for background location updates
-        if UIApplication.shared.applicationState == .background {
-            locationManager.startMonitoringSignificantLocationChanges()
+        // If phone is charging use BestForNavigation (following Apple guidelines)
+        // This mode takes more power and should be used just when charging or full charged
+        if isPhoneCharging() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         }
+        else {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        }
+        
+        // Register for background location updates
+//        if UIApplication.shared.applicationState == .background {
+            locationManager.startMonitoringSignificantLocationChanges()
+//        }
     }
     
     private func setupTransportationModeObserver() {
@@ -79,9 +103,10 @@ final class AppLocationManager: NSObject {
         locationAuthorizationStatus = locationManager.authorizationStatus
         
         switch locationManager.authorizationStatus {
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
-            TransportationModeDetectionService.shared.startMonitoring()
+        case .authorizedWhenInUse:
+            locationManager.requestAlwaysAuthorization()
+        case .authorizedAlways:
+            startLocationServices()
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .denied, .restricted:
@@ -91,13 +116,99 @@ final class AppLocationManager: NSObject {
         }
     }
     
-    func stopUpdatingLocation() {
-        locationManager.stopUpdatingLocation()
-        TransportationModeDetectionService.shared.stopMonitoring()
-        endTrackingIfNeeded()
+    func startNewTrip() {
+        isTracking = true
+        GeofencingService.shared.removeAllGeofences()
+        CoreDataManager.shared.startNewTrip()
     }
     
-    // MARK: - Private Methods
+    func endCurrentTrip(at location: CLLocation?) {
+        guard let location else { return }
+        isTracking = false
+        GeofencingService.shared.createGeofenceForParkedLocation(location)
+        CoreDataManager.shared.endCurrentTrip()
+    }
+    
+    // MARK: - Background Task
+    
+    private func registerBackgroundTask() {
+        BGTaskScheduler.shared.register(
+            forTaskWithIdentifier: backgroundTaskIdentifier,
+            using: nil
+        ) { task in
+            self.handleBackgroundTask(task as! BGAppRefreshTask)
+        }
+    }
+    
+    private func handleBackgroundTask(_ task: BGAppRefreshTask) {
+        scheduleBackgroundTask()
+        
+        task.expirationHandler = {
+            // Clean up background task if needed
+            task.setTaskCompleted(success: false)
+        }
+        
+        // Keep location updates running in background
+        locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
+        // Give enough time for location update
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            task.setTaskCompleted(success: true)
+        }
+    }
+    
+    private func beginBackgroundTask() {
+        guard backgroundTask == .invalid else { return }
+        
+        backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+            self?.endBackgroundTask()
+        }
+    }
+    
+    private func scheduleBackgroundTask() {
+        let request = BGAppRefreshTaskRequest(identifier: backgroundTaskIdentifier)
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // 15 minutes
+        
+        do {
+            try BGTaskScheduler.shared.submit(request)
+        } catch {
+            print("Could not schedule background task: \(error)")
+        }
+    }
+    
+    private func endBackgroundTask() {
+        guard backgroundTask != .invalid else { return }
+        
+        UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = .invalid
+    }
+    
+    // MARK: - Location
+    
+    private func startLocationServices() {
+        beginBackgroundTask()
+        locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
+        scheduleBackgroundTask()
+    }
+    
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
+        endTrackingIfNeeded()
+        endBackgroundTask()
+    }
+    
+    fileprivate func isPhoneCharging() -> Bool{
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        let state = UIDevice.current.batteryState
+        
+        if state == .charging || state == .full {
+            return true
+        }
+        
+        return false
+    }
     
     private func handleTransportationModeChange(_ mode: TransportationMode) {
         switch mode {
@@ -108,6 +219,8 @@ final class AppLocationManager: NSObject {
         }
     }
     
+    // MARK: - Tracking
+    
     private func startTrackingIfNeeded() {
         guard !isTracking else { return }
         
@@ -115,6 +228,20 @@ final class AppLocationManager: NSObject {
         lastSignificantMovement = Date()
         speedReadings.removeAll() // Reset speed readings for new trip
         CoreDataManager.shared.startNewTrip()
+        locationManager.showsBackgroundLocationIndicator = true
+    }
+    
+    private func endTrackingIfNeeded() {
+        guard isTracking else { return }
+        
+        isTracking = false
+        lastSignificantMovement = nil
+        speedReadings.removeAll()
+        currentSpeed = 0.0
+        averageSpeed = 0.0
+        endCurrentTrip(at: currentLocation)
+        CoreDataManager.shared.endCurrentTrip()
+        locationManager.showsBackgroundLocationIndicator = false
     }
     
     private func checkForTripEnd() {
@@ -127,25 +254,18 @@ final class AppLocationManager: NSObject {
         }
     }
     
-    private func endTrackingIfNeeded() {
-        guard isTracking else { return }
-        
-        isTracking = false
-        lastSignificantMovement = nil
-        speedReadings.removeAll()
-        currentSpeed = 0.0
-        averageSpeed = 0.0
-        CoreDataManager.shared.endCurrentTrip()
-    }
+    // MARK: - Notifications
     
     private func handleAppDidEnterBackground() {
+        beginBackgroundTask() 
         locationManager.startMonitoringSignificantLocationChanges()
     }
     
     private func handleAppWillEnterForeground() {
-        locationManager.stopMonitoringSignificantLocationChanges()
-        locationManager.startUpdatingLocation()
+        startUpdatingLocation()
     }
+    
+    // MARK: - Helpers
     
     private func updateLastSignificantMovement(_ location: CLLocation) {
         // Update last movement time if accuracy is good enough
@@ -196,6 +316,15 @@ extension AppLocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location manager failed with error: \(error.localizedDescription)")
+        endTrackingIfNeeded()
+    }
+    
+    func locationManagerDidPauseLocationUpdates(_ manager: CLLocationManager) {
+        print("Location updates paused.")
+    }
+    
+    func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
+        print("Location updates resumed.")
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

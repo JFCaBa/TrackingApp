@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Map-related navigation coordinator
+//  Details: Handles navigation and view creation for map functionality
+//
 
 import UIKit
 

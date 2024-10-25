@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: App-wide notification definitions
+//  Details: Centralizes notification names and helpers
+//
 
 import Combine
 import CoreLocation

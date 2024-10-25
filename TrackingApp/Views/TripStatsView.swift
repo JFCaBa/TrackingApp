@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Trip statistics UI component
+//  Details: Displays comprehensive trip statistics
+//
 
 import UIKit
 

@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Statistics card UI component
+//  Details: Reusable card view for statistics
+//
 
 import UIKit
 

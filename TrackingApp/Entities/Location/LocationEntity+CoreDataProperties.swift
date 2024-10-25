@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Core Data location entity properties
+//  Details: Generated Core Data properties for locations
+//
 
 import CoreData
 import Foundation

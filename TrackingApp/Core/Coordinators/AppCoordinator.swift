@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Main application navigation coordinator
+//  Details: Manages app-wide navigation flow and tab bar setup
+//
 
 import UIKit
 

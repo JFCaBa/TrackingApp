@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Trip map view model
+//  Details: Handles individual trip map visualization logic
+//
 
 import Combine
 import CoreLocation

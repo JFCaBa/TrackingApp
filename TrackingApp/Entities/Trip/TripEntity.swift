@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Trip model
+//  Details: Defines trip data structure
+//
 
 import Foundation
 
@@ -22,7 +25,7 @@ extension Trip {
     init(from entity: TripEntity) {
         self.id = entity.id
         self.startDate = entity.startDate
-        self.endDate = entity.endDate ?? .now
+        self.endDate = entity.endDate
         self.averageSpeed = entity.averageSpeed
         self.maxSpeed = entity.maxSpeed
         self.distance = entity.distance

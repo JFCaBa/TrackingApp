@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Map screen view model
+//  Details: Handles map-related business logic and data
+//
 
 import Combine
 import MapKit

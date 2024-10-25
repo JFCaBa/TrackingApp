@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Loading indicator UI component
+//  Details: Reusable loading view
+//
 
 import UIKit
 

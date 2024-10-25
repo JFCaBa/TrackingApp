@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Location-specific Core Data operations
+//  Details: Manages location entity operations and queries
+//
 
 import Combine
 import CoreData

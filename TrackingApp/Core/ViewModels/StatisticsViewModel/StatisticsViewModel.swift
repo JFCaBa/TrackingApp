@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Statistics screen view model
+//  Details: Manages statistics calculation and presentation
+//
 
 import Combine
 import Foundation

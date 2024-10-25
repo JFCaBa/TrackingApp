@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Map annotation for trips
+//  Details: Custom map annotation for trip markers
+//
 
 import CoreLocation
 import MapKit

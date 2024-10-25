@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Transportation mode detection service
+//  Details: Analyzes movement patterns to determine transport mode
+//
 
 import CoreMotion
 import Combine

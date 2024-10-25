@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Individual trip map view controller
+//  Details: Shows detailed trip route and information
+//
 
 import UIKit
 import MapKit

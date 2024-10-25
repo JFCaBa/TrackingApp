@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Map screen view controller
+//  Details: Handles map display and user interaction
+//
 
 import Combine
 import MapKit

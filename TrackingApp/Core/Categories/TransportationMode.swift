@@ -1,3 +1,13 @@
+//
+//  TransportationMode.swift
+//  TrackingApp
+//
+//  Created by Jose on 23/10/2024.
+//
+//  Purpose: Transportation mode enumeration and detection logic
+//  Details: Defines transport types and provides mode detection algorithms
+//
+
 import Foundation
 import UIKit
 

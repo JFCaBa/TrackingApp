@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Geofence management service
+//  Details: Handles creation and monitoring of geofences
+//
 
 import Combine
 import CoreLocation
@@ -51,7 +54,8 @@ final class GeofencingService: NSObject {
             identifier: "ParkedLocation-\(Date().timeIntervalSince1970)"
         )
         
-        region.notifyOnEntry = true
+        // Not using entry at the moment
+//        region.notifyOnEntry = true
         region.notifyOnExit = true
         
         // Start monitoring the region

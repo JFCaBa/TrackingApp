@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Generic loading state enumeration
+//  Details: Defines possible states for data loading operations
+//
 
 import Foundation
 

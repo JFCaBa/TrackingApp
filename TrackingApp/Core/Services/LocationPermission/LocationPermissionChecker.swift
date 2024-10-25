@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Location authorization service
+//  Details: Handles location permission checks and requests
+//
 
 import Combine
 import CoreLocation

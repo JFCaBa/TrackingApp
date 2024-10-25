@@ -4,6 +4,9 @@
 //
 //  Created by Jose on 23/10/2024.
 //
+//  Purpose: Location permission UI alerts
+//  Details: Manages permission-related user interactions
+//
 
 import UIKit
 
