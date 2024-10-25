@@ -16,10 +16,16 @@ import UIKit
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private var appCoordinator: AppCoordinator?
+    private var isRunningUnitTests: Bool {
+        return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+    }
     
     // MARK: - application(_:didFinishLaunchingWithOptions)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if !isRunningUnitTests {
+            registerBackgroundTask()
+        }
         AppLocationManager.shared.startUpdatingLocation()
         TransportationModeDetectionService.shared.startMonitoring()
         
@@ -27,6 +33,21 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppCoordinator()
         
         return true
+    }
+    
+    func registerBackgroundTask() {
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.app.location.refresh", using: nil) { task in
+            if let refreshTask = task as? BGAppRefreshTask {
+                self.handleBackgroundTask(task: refreshTask)
+            } else {
+                task.setTaskCompleted(success: false)
+            }
+        }
+    }
+    
+    func handleBackgroundTask(task: BGAppRefreshTask) {
+        // Handle your background task logic
+        AppLocationManager.shared.handleBackgroundTask(task)
     }
     
     private func setupWindow() {

@@ -40,6 +40,9 @@ final class AppLocationManager: NSObject {
     // Background task
     private let backgroundTaskIdentifier = "com.app.location.refresh"
     private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+    private var isRunningUnitTests: Bool {
+        return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+    }
     
     // MARK: - Initialization
     
@@ -47,7 +50,7 @@ final class AppLocationManager: NSObject {
         super.init()
         setupLocationManager()
         setupTransportationModeObserver()
-        registerBackgroundTask()
+//        registerBackgroundTask()
     }
     
     // MARK: - Setup
@@ -131,34 +134,40 @@ final class AppLocationManager: NSObject {
     
     // MARK: - Background Task
     
-    private func registerBackgroundTask() {
-        BGTaskScheduler.shared.register(
-            forTaskWithIdentifier: backgroundTaskIdentifier,
-            using: nil
-        ) { task in
-            self.handleBackgroundTask(task as! BGAppRefreshTask)
-        }
-    }
-    
-    private func handleBackgroundTask(_ task: BGAppRefreshTask) {
-        scheduleBackgroundTask()
+    func handleBackgroundTask(_ task: BGAppRefreshTask) {
+        guard !isRunningUnitTests else { return }
         
+        scheduleBackgroundTask()
+
         task.expirationHandler = {
             // Clean up background task if needed
             task.setTaskCompleted(success: false)
         }
         
-        // Keep location updates running in background
+        // Keep location updates running in the background
         locationManager.startUpdatingLocation()
         locationManager.startMonitoringSignificantLocationChanges()
         
-        // Give enough time for location update
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             task.setTaskCompleted(success: true)
         }
     }
+
+    func scheduleBackgroundTask() {
+        guard !isRunningUnitTests else { return }
+        
+        let request = BGAppRefreshTaskRequest(identifier: backgroundTaskIdentifier)
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // 15 minutes later
+
+        do {
+            try BGTaskScheduler.shared.submit(request)
+        } catch {
+            print("Could not schedule background task: \(error.localizedDescription)")
+        }
+    }
     
     private func beginBackgroundTask() {
+        guard !isRunningUnitTests else { return }
         guard backgroundTask == .invalid else { return }
         
         backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
@@ -166,18 +175,8 @@ final class AppLocationManager: NSObject {
         }
     }
     
-    private func scheduleBackgroundTask() {
-        let request = BGAppRefreshTaskRequest(identifier: backgroundTaskIdentifier)
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // 15 minutes
-        
-        do {
-            try BGTaskScheduler.shared.submit(request)
-        } catch {
-            print("Could not schedule background task: \(error)")
-        }
-    }
-    
     private func endBackgroundTask() {
+        guard !isRunningUnitTests else { return }
         guard backgroundTask != .invalid else { return }
         
         UIApplication.shared.endBackgroundTask(backgroundTask)
@@ -208,15 +207,6 @@ final class AppLocationManager: NSObject {
         }
         
         return false
-    }
-    
-    private func handleTransportationModeChange(_ mode: TransportationMode) {
-        switch mode {
-        case .automotive:
-            startTrackingIfNeeded()
-        case .unknown, .walking, .cycling:
-            checkForTripEnd()
-        }
     }
     
     // MARK: - Tracking
@@ -255,6 +245,15 @@ final class AppLocationManager: NSObject {
     }
     
     // MARK: - Notifications
+    
+    private func handleTransportationModeChange(_ mode: TransportationMode) {
+        switch mode {
+        case .automotive:
+            startTrackingIfNeeded()
+        case .unknown, .walking, .cycling:
+            checkForTripEnd()
+        }
+    }
     
     private func handleAppDidEnterBackground() {
         beginBackgroundTask() 
@@ -341,40 +340,3 @@ extension AppLocationManager: CLLocationManagerDelegate {
         }
     }
 }
-
-// MARK: - Testing Extensions
-
-#if DEBUG
-extension AppLocationManager {
-    var testIsTracking: Bool {
-        isTracking
-    }
-    
-    func testSetTracking(_ tracking: Bool) {
-        isTracking = tracking
-    }
-    
-    func testResetState() {
-        isTracking = false
-        lastSignificantMovement = nil
-        currentLocation = nil
-        currentSpeed = 0.0
-        averageSpeed = 0.0
-        speedReadings.removeAll()
-    }
-    
-    func testSetSpeed(_ speed: Double) {
-        guard let location = currentLocation else { return }
-        let testLocation = CLLocation(
-            coordinate: location.coordinate,
-            altitude: location.altitude,
-            horizontalAccuracy: location.horizontalAccuracy,
-            verticalAccuracy: location.verticalAccuracy,
-            course: location.course,
-            speed: speed,
-            timestamp: Date()
-        )
-        updateSpeed(testLocation)
-    }
-}
-#endif

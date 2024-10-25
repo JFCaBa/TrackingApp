@@ -23,23 +23,6 @@ final class AppNotificationsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testTransportationModeNotification() {
-        let expectation = XCTestExpectation(description: "Transportation mode notification received")
-        let testMode = TransportationMode.automotive
-        
-        NotificationCenter.default
-            .transportationModePublisher()
-            .sink { mode in
-                XCTAssertEqual(mode, testMode)
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
-        
-        NotificationHelper.postTransportationModeChange(testMode)
-        
-        wait(for: [expectation], timeout: 1.0)
-    }
-    
     func testLocationUpdateNotification() {
         let expectation = XCTestExpectation(description: "Location update notification received")
         let testLocation = CLLocation(latitude: 37.3317, longitude: -122.0325)

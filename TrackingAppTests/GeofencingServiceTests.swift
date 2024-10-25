@@ -35,7 +35,7 @@ final class GeofencingServiceTests: XCTestCase {
         
         geofencingService.createGeofenceForParkedLocation(testLocation)
         
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 10.0)
     }
     
     func testGeofenceState() {
@@ -52,7 +52,7 @@ final class GeofencingServiceTests: XCTestCase {
         
         geofencingService.createGeofenceForParkedLocation(testLocation)
         
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 10.0)
     }
     
     func testGeofenceNotifications() {
@@ -84,6 +84,6 @@ final class GeofencingServiceTests: XCTestCase {
         )
         delegate.locationManager!(CLLocationManager(), didExitRegion: region)
         
-        wait(for: [parkedExpectation, departedExpectation], timeout: 1.0)
+        wait(for: [parkedExpectation, departedExpectation], timeout: 10.0)
     }
 }

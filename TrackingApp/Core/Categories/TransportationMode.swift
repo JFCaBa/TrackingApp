@@ -12,6 +12,13 @@ import Foundation
 import UIKit
 
 enum TransportationMode: String, Codable, CaseIterable {
+    static let maxWalkingSpeed: Double = 7
+    static let maxCyclingSpeed: Double = 30
+    static let maxDrivingSpeed: Double = 200
+    static let averageWalkingSpeed: Double = 5
+    static let averageCyclingSpeed: Double = 15
+    static let averageDrivingSpeed: Double = 50
+    
     case automotive
     case cycling
     case walking
@@ -50,11 +57,11 @@ enum TransportationMode: String, Codable, CaseIterable {
     var speedRange: ClosedRange<Double> {
         switch self {
         case .walking:
-            return 0...7
+            return 0...TransportationMode.maxWalkingSpeed
         case .cycling:
-            return 7...25
+            return TransportationMode.maxWalkingSpeed...TransportationMode.maxCyclingSpeed
         case .automotive:
-            return 25...200
+            return TransportationMode.maxCyclingSpeed...TransportationMode.maxDrivingSpeed
         case .unknown:
             return 0...0
         }
@@ -64,11 +71,11 @@ enum TransportationMode: String, Codable, CaseIterable {
         let speedKmh = speed * 3.6 // Convert m/s to km/h
         
         switch speedKmh {
-        case 0..<7:
+        case 0..<TransportationMode.maxWalkingSpeed:
             return .walking
-        case 7..<25:
+        case TransportationMode.maxWalkingSpeed..<TransportationMode.maxCyclingSpeed:
             return .cycling
-        case 25...:
+        case TransportationMode.maxCyclingSpeed...:
             return .automotive
         default:
             return .unknown
@@ -97,11 +104,11 @@ enum TransportationMode: String, Codable, CaseIterable {
     var typicalAverageSpeed: Double {
         switch self {
         case .walking:
-            return 5.0 // 5 km/h
+            return TransportationMode.averageWalkingSpeed 
         case .cycling:
-            return 15.0 // 15 km/h
+            return TransportationMode.averageCyclingSpeed
         case .automotive:
-            return 50.0 // 50 km/h
+            return TransportationMode.averageDrivingSpeed
         case .unknown:
             return 0.0
         }

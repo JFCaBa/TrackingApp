@@ -15,14 +15,15 @@ import UIKit
 
 final class CoreDataManager {
     static let shared = CoreDataManager()
-    
+
     public let persistentContainer: NSPersistentContainer
     var currentTrip: TripEntity?
-    
-    private init() {
-        persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+
+    // Default initializer using AppDelegate's persistentContainer
+    private init(persistentContainer: NSPersistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer) {
+        self.persistentContainer = persistentContainer
     }
-    
+
     // MARK: - Trip Management
     
     func startNewTrip() {

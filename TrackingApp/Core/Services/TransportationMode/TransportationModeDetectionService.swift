@@ -168,32 +168,3 @@ final class TransportationModeDetectionService {
         }
     }
 }
-
-// MARK: - Testing Extensions
-
-#if DEBUG
-extension TransportationModeDetectionService {
-    func testProcessSpeed(_ speed: Double) {
-        processSpeedUpdate(speed)
-    }
-    
-    func testProcessActivity(_ activity: CMMotionActivity) {
-        processActivityUpdate(activity)
-    }
-    
-    var testCurrentMode: TransportationMode {
-        currentMode
-    }
-    
-    var testModeConfidences: [TransportationMode: Double] {
-        modeConfidences
-    }
-    
-    func testResetState() {
-        currentMode = .unknown
-        modeConfidences.removeAll()
-        consecutiveModeDetections.removeAll()
-        lastModeChangeTime = .distantPast
-    }
-}
-#endif
