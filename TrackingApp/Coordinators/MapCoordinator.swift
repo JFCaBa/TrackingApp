@@ -10,7 +10,7 @@
 
 import UIKit
 
-final class MapCoordinator: Coordinator {
+final class MapCoordinator: CoordinatorProtocol {
     func createViewController() -> UIViewController {
         let viewModel = MapViewModel()
         let viewController = MapViewController(viewModel: viewModel)

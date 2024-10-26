@@ -10,7 +10,7 @@
 
 import UIKit
 
-final class StatisticsCoordinator: Coordinator {
+final class StatisticsCoordinator: CoordinatorProtocol {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController = UINavigationController()) {

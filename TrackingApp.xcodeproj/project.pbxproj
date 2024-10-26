@@ -30,6 +30,7 @@
 		828545632CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
 		828545642CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
 		828545652CCBCF110074EBF9 /* StatisticsViewController+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */; };
+		8285456E2CCCF88B0074EBF9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285456D2CCCF88B0074EBF9 /* CoordinatorProtocol.swift */; };
 		82C285882CC8E918000CF5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285872CC8E918000CF5F7 /* AppDelegate.swift */; };
 		82C2858A2CC8E918000CF5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C285892CC8E918000CF5F7 /* SceneDelegate.swift */; };
 		82C285922CC8E918000CF5F7 /* TrackingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */; };
@@ -183,6 +184,7 @@
 		828545592CCBC3E40074EBF9 /* TripModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelTests.swift; sourceTree = "<group>"; };
 		8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticsViewController+Menu.swift"; sourceTree = "<group>"; };
+		8285456D2CCCF88B0074EBF9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		82C285842CC8E918000CF5F7 /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C285872CC8E918000CF5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C285892CC8E918000CF5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,40 +266,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8285454A2CC9A3370074EBF9 /* AppLocationManager */ = {
+		8285454A2CC9A3370074EBF9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				82C285D52CC8EEE2000CF5F7 /* AppLocationManager.swift */,
-				82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */,
+				828545712CCCF96A0074EBF9 /* Extensions */,
 			);
-			path = AppLocationManager;
+			path = Location;
 			sourceTree = "<group>";
 		};
-		8285454B2CC9A3500074EBF9 /* CoreDataManager */ = {
+		8285454B2CC9A3500074EBF9 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				82C285F32CC90404000CF5F7 /* CoreDataManager.swift */,
-				82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */,
-				828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */,
+				828545702CCCF9600074EBF9 /* Extensions */,
 			);
-			path = CoreDataManager;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
-		8285454C2CC9A35B0074EBF9 /* LocationPermission */ = {
+		8285454C2CC9A35B0074EBF9 /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
 				82C285D92CC8F26C000CF5F7 /* LocationPermissionAlert.swift */,
 				82C285D72CC8F1AC000CF5F7 /* LocationPermissionChecker.swift */,
 			);
-			path = LocationPermission;
+			path = Permissions;
 			sourceTree = "<group>";
 		};
-		8285454D2CC9A3650074EBF9 /* TransportationMode */ = {
+		8285454D2CC9A3650074EBF9 /* Transportation */ = {
 			isa = PBXGroup;
 			children = (
+				82C286542CC953B9000CF5F7 /* TransportationMode.swift */,
 				82C286612CC96A3B000CF5F7 /* TransportationModeDetectionService.swift */,
 			);
-			path = TransportationMode;
+			path = Transportation;
 			sourceTree = "<group>";
 		};
 		8285454E2CC9A36D0074EBF9 /* Geofencing */ = {
@@ -308,80 +310,190 @@
 			path = Geofencing;
 			sourceTree = "<group>";
 		};
-		8285454F2CC9A3840074EBF9 /* MapViewController */ = {
+		8285454F2CC9A3840074EBF9 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */,
+				828545532CC9A3C50074EBF9 /* ViewModels */,
+				8285456B2CCCF7070074EBF9 /* Views */,
+				828545692CCCF6C60074EBF9 /* ViewControllers */,
 			);
-			path = MapViewController;
+			path = Map;
 			sourceTree = "<group>";
 		};
-		828545502CC9A3910074EBF9 /* TripMapViewController */ = {
+		828545502CC9A3910074EBF9 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
-				828545362CC996900074EBF9 /* TripMapViewController.swift */,
+				828545542CC9A3D40074EBF9 /* ViewModels */,
+				8285456A2CCCF6FA0074EBF9 /* Views */,
+				828545682CCCF6BF0074EBF9 /* ViewControllers */,
 			);
-			path = TripMapViewController;
+			path = Trips;
 			sourceTree = "<group>";
 		};
 		828545512CC9A39A0074EBF9 /* TripsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */,
-				82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */,
+				828545672CCCF6B70074EBF9 /* ViewControllers */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
 		};
-		828545522CC9A3A60074EBF9 /* StatisticViewController */ = {
+		828545522CC9A3A60074EBF9 /* Statistic */ = {
 			isa = PBXGroup;
 			children = (
-				82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */,
-				828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */,
+				8285456C2CCCF8360074EBF9 /* Views */,
+				828545562CC9A3EA0074EBF9 /* ViewModels */,
+				828545662CCCF6AD0074EBF9 /* ViewControllers */,
 			);
-			path = StatisticViewController;
+			path = Statistic;
 			sourceTree = "<group>";
 		};
-		828545532CC9A3C50074EBF9 /* MapViewModel */ = {
+		828545532CC9A3C50074EBF9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				82C285BC2CC8E9A4000CF5F7 /* MapViewModel.swift */,
 				82C285F52CC90466000CF5F7 /* MapViewModel+CoreData.swift */,
 			);
-			path = MapViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		828545542CC9A3D40074EBF9 /* TripsViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */,
-				82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */,
-			);
-			path = TripsViewModel;
-			sourceTree = "<group>";
-		};
-		828545552CC9A3DE0074EBF9 /* TripMapViewModel */ = {
+		828545542CC9A3D40074EBF9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				8285453A2CC997210074EBF9 /* TripMapViewModel.swift */,
+				82C285CA2CC8EACD000CF5F7 /* TripsViewModel.swift */,
+				82C285F72CC9048A000CF5F7 /* TripsViewModel+CoreData.swift */,
 			);
-			path = TripMapViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		828545562CC9A3EA0074EBF9 /* StatisticsViewModel */ = {
+		828545562CC9A3EA0074EBF9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				82C2860E2CC9154E000CF5F7 /* StatisticsViewModel.swift */,
 			);
-			path = StatisticsViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		828545612CCBCC790074EBF9 /* Subclasses */ = {
+		828545662CCCF6AD0074EBF9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */,
+				82C286142CC915BA000CF5F7 /* StatisticsViewController.swift */,
+				828545622CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift */,
 			);
-			path = Subclasses;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		828545672CCCF6B70074EBF9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				82C285C62CC8EAA0000CF5F7 /* TripsViewController.swift */,
+				82C286062CC90D03000CF5F7 /* TripsViewController+TripCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		828545682CCCF6BF0074EBF9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				828545362CC996900074EBF9 /* TripMapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		828545692CCCF6C60074EBF9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				82C285BE2CC8E9E4000CF5F7 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8285456A2CCCF6FA0074EBF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8285453E2CC997690074EBF9 /* TripStatsView.swift */,
+				828545422CC9979D0074EBF9 /* TripAnnotation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8285456B2CCCF7070074EBF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8285456C2CCCF8360074EBF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82C286502CC931C0000CF5F7 /* StatCardView.swift */,
+				82C286172CC915FB000CF5F7 /* TripStatCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8285456F2CCCF89E0074EBF9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8285456D2CCCF88B0074EBF9 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		828545702CCCF9600074EBF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82C286582CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift */,
+				828545462CC998230074EBF9 /* CoreDataManager+Locations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		828545712CCCF96A0074EBF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82C286762CC971F4000CF5F7 /* AppLocationManager+Geofencing.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		828545722CCCF9980074EBF9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				828545732CCCF9D30074EBF9 /* State */,
+				82C286732CC97096000CF5F7 /* Extensions */,
+				82C285E42CC8F394000CF5F7 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		828545732CCCF9D30074EBF9 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				82C2865D2CC9599F000CF5F7 /* LoadingState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		828545742CCCFA260074EBF9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */,
+				82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		828545752CCCFA520074EBF9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				82C285F12CC903E4000CF5F7 /* Trip */,
+				82C285F22CC903ED000CF5F7 /* Location */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		82C2857B2CC8E918000CF5F7 = {
@@ -407,16 +519,16 @@
 		82C285862CC8E918000CF5F7 /* TrackingApp */ = {
 			isa = PBXGroup;
 			children = (
-				82C285DD2CC8F30F000CF5F7 /* Application */,
-				82C285DE2CC8F32B000CF5F7 /* Core */,
-				82C285E52CC8F3AB000CF5F7 /* Entities */,
-				82C286732CC97096000CF5F7 /* Extensions */,
 				82C285982CC8E91A000CF5F7 /* Info.plist */,
-				82C285E62CC8F493000CF5F7 /* Resources */,
-				828545612CCBCC790074EBF9 /* Subclasses */,
 				82C285902CC8E918000CF5F7 /* TrackingApp.xcdatamodeld */,
-				82C285E32CC8F389000CF5F7 /* ViewControllers */,
-				82C285E42CC8F394000CF5F7 /* Views */,
+				82C285DD2CC8F30F000CF5F7 /* Application */,
+				82C285DF2CC8F332000CF5F7 /* Coordinators */,
+				82C285E32CC8F389000CF5F7 /* Features */,
+				82C285E22CC8F37A000CF5F7 /* Services */,
+				82C285E52CC8F3AB000CF5F7 /* Models */,
+				828545722CCCF9980074EBF9 /* Common */,
+				82C285E62CC8F493000CF5F7 /* Resources */,
+				82C285E02CC8F360000CF5F7 /* ViewModels */,
 			);
 			path = TrackingApp;
 			sourceTree = "<group>";
@@ -456,20 +568,10 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		82C285DE2CC8F32B000CF5F7 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				82C2865C2CC9596C000CF5F7 /* Categories */,
-				82C285DF2CC8F332000CF5F7 /* Coordinators */,
-				82C285E22CC8F37A000CF5F7 /* Services */,
-				82C285E02CC8F360000CF5F7 /* ViewModels */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		82C285DF2CC8F332000CF5F7 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				8285456F2CCCF89E0074EBF9 /* Protocols */,
 				82C285BA2CC8E94B000CF5F7 /* AppCoordinator.swift */,
 				82C285C42CC8EA4B000CF5F7 /* MapCoordinator.swift */,
 				82C2861C2CC9182D000CF5F7 /* StatisticsCoordinator.swift */,
@@ -481,10 +583,6 @@
 		82C285E02CC8F360000CF5F7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				828545532CC9A3C50074EBF9 /* MapViewModel */,
-				828545542CC9A3D40074EBF9 /* TripsViewModel */,
-				828545552CC9A3DE0074EBF9 /* TripMapViewModel */,
-				828545562CC9A3EA0074EBF9 /* StatisticsViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -492,47 +590,43 @@
 		82C285E22CC8F37A000CF5F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8285454A2CC9A3370074EBF9 /* AppLocationManager */,
-				8285454B2CC9A3500074EBF9 /* CoreDataManager */,
+				8285454B2CC9A3500074EBF9 /* CoreData */,
 				8285454E2CC9A36D0074EBF9 /* Geofencing */,
-				8285454C2CC9A35B0074EBF9 /* LocationPermission */,
-				8285454D2CC9A3650074EBF9 /* TransportationMode */,
+				8285454A2CC9A3370074EBF9 /* Location */,
+				8285454C2CC9A35B0074EBF9 /* Permissions */,
+				8285454D2CC9A3650074EBF9 /* Transportation */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		82C285E32CC8F389000CF5F7 /* ViewControllers */ = {
+		82C285E32CC8F389000CF5F7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8285454F2CC9A3840074EBF9 /* MapViewController */,
-				828545502CC9A3910074EBF9 /* TripMapViewController */,
+				8285454F2CC9A3840074EBF9 /* Map */,
+				828545502CC9A3910074EBF9 /* Trips */,
 				828545512CC9A39A0074EBF9 /* TripsViewController */,
-				828545522CC9A3A60074EBF9 /* StatisticViewController */,
+				828545522CC9A3A60074EBF9 /* Statistic */,
 			);
-			path = ViewControllers;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		82C285E42CC8F394000CF5F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				82C285C22CC8EA2F000CF5F7 /* SpeedView.swift */,
-				82C286172CC915FB000CF5F7 /* TripStatCardView.swift */,
-				8285453E2CC997690074EBF9 /* TripStatsView.swift */,
-				82C286502CC931C0000CF5F7 /* StatCardView.swift */,
-				82C286022CC90BE5000CF5F7 /* LoadingView.swift */,
 				82C286042CC90C09000CF5F7 /* EmptyStateView.swift */,
-				828545422CC9979D0074EBF9 /* TripAnnotation.swift */,
+				82C286022CC90BE5000CF5F7 /* LoadingView.swift */,
+				8285455D2CCBCC680074EBF9 /* PaddedLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		82C285E52CC8F3AB000CF5F7 /* Entities */ = {
+		82C285E52CC8F3AB000CF5F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				82C285F12CC903E4000CF5F7 /* Trip */,
-				82C285F22CC903ED000CF5F7 /* Location */,
+				828545752CCCFA520074EBF9 /* CoreData */,
+				828545742CCCFA260074EBF9 /* Domain */,
 			);
-			path = Entities;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		82C285E62CC8F493000CF5F7 /* Resources */ = {
@@ -547,7 +641,6 @@
 		82C285F12CC903E4000CF5F7 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
-				82C285CC2CC8EAE2000CF5F7 /* TripEntity.swift */,
 				82C285E72CC90330000CF5F7 /* TripEntity+CoreDataClass.swift */,
 				82C285E92CC90352000CF5F7 /* TripEntity+CoreDataProperties.swift */,
 			);
@@ -557,20 +650,10 @@
 		82C285F22CC903ED000CF5F7 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				82C285EB2CC9037E000CF5F7 /* LocationEntity.swift */,
 				82C285ED2CC9038A000CF5F7 /* LocationEntity+CoreDataClass.swift */,
 				82C285EF2CC903C8000CF5F7 /* LocationEntity+CoreDataProperties.swift */,
 			);
 			path = Location;
-			sourceTree = "<group>";
-		};
-		82C2865C2CC9596C000CF5F7 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				82C286542CC953B9000CF5F7 /* TransportationMode.swift */,
-				82C2865D2CC9599F000CF5F7 /* LoadingState.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		82C286732CC97096000CF5F7 /* Extensions */ = {
@@ -751,6 +834,7 @@
 				82C2861D2CC9182D000CF5F7 /* StatisticsCoordinator.swift in Sources */,
 				82C286592CC95439000CF5F7 /* CoreDataManager+TransportationMode.swift in Sources */,
 				828545632CCBCF0E0074EBF9 /* StatisticsViewController+Menu.swift in Sources */,
+				8285456E2CCCF88B0074EBF9 /* CoordinatorProtocol.swift in Sources */,
 				82C285BF2CC8E9E4000CF5F7 /* MapViewController.swift in Sources */,
 				82C285F82CC9048A000CF5F7 /* TripsViewModel+CoreData.swift in Sources */,
 				82C286512CC931C0000CF5F7 /* StatCardView.swift in Sources */,
