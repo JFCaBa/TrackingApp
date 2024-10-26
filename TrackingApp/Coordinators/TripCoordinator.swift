@@ -10,7 +10,7 @@
 
 import UIKit
 
-final class TripsCoordinator: Coordinator {
+final class TripsCoordinator: CoordinatorProtocol {
     // MARK: - Properties
     
     private let navigationController: UINavigationController

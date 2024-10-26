@@ -10,9 +10,9 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: CoordinatorProtocol {
     private let window: UIWindow
-    private var childCoordinators: [Coordinator] = []
+    private var childCoordinators: [CoordinatorProtocol] = []
     private let tabBarController: UITabBarController
     
     init(window: UIWindow) {
@@ -96,8 +96,5 @@ final class AppCoordinator: Coordinator {
     }
 }
 
-// MARK: - Coordinator Protocol
-protocol Coordinator: AnyObject {
-    func start()
-}
+
 
